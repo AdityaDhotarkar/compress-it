@@ -1,0 +1,2706 @@
+Telecommunications 
+Satellite Communications 
+Principles of Satellite Communications
+Courseware Sample
+86311-F0 Order no.: 86311-F0
+First Edition 
+Revision level: 05/2016 
+By the staff of Festo Didactic 
+© Festo Didactic Ltée/Ltd, Quebec, Canada 2014 
+Internet: www.festo-didactic.com 
+e-mail: did@de.festo.com 
+Printed in Canada 
+All rights reserved 
+ISBN 978-2-89640-417-9 (Printed version) 
+ISBN 978-2-89747-109-5 (CD-ROM) 
+Legal Deposit – Bibliothèque et Archives nationales du Québec, 2014 
+Legal Deposit – Library and Archives Canada, 2014 
+The purchaser shall receive a single right of use which is non-exclusive, non-time-limited and limited 
+geographically to use at the purchaser's site/location as follows. 
+The purchaser shall be entitled to use the work to train his/her staff at the purchaser's site/location and 
+shall also be entitled to use parts of the copyright material as the basis for the production of his/her own 
+training documentation for the training of his/her staff at the purchaser's site/location with 
+acknowledgement of source and to make copies for this purpose. In the case of schools/technical 
+colleges, training centers, and universities, the right of use shall also include use by school and college 
+students and trainees at the purchaser's site/location for teaching purposes. 
+The right of use shall in all cases exclude the right to publish the copyright material or to make this 
+available for use on intranet, Internet and LMS platforms and databases such as Moodle, which allow 
+access by a wide variety of users, including those outside of the purchaser's site/location. 
+Entitlement to other rights relating to reproductions, copies, adaptations, translations, microfilming and 
+transfer to and storage and processing in electronic systems, no matter whether in whole or in part, shall 
+require the prior consent of Festo Didactic GmbH & Co. KG. 
+Information in this document is subject to change without notice and does not represent a commitment on 
+the part of Festo Didactic. The Festo materials described in this document are furnished under a license 
+agreement or a nondisclosure agreement. 
+Festo Didactic recognizes product names as trademarks or registered trademarks of their respective 
+holders. 
+All other trademarks are the property of their respective owners. Other trademarks and trade names may 
+be used in this document to refer to either the entity claiming the marks and names or their products. 
+Festo Didactic disclaims any proprietary interest in trademarks and trade names other than its own. © Festo Didactic 86311-10 III
+Safety and Common Symbols 
+The following safety and common symbols may be used in this manual and on 
+the equipment: 
+Symbol Description 
+DANGER indicates a hazard with a high level of risk which, if not 
+avoided, will result in death or serious injury. 
+WARNING indicates a hazard with a medium level of risk which, 
+if not avoided, could result in death or serious injury.
+CAUTION indicates a hazard with a low level of risk which, if not 
+avoided, could result in minor or moderate injury.
+CAUTION used without the Caution, risk of danger sign , 
+indicates a hazard with a potentially hazardous situation which, 
+if not avoided, may result in property damage.
+Caution, risk of electric shock 
+Caution, hot surface
+Caution, risk of danger 
+Caution, lifting hazard 
+Caution, hand entanglement hazard 
+Notice, non-ionizing radiation 
+Direct current 
+Alternating current 
+Both direct and alternating current 
+Three-phase alternating current 
+Earth (ground) terminal Safety and Common Symbols 
+IV © Festo Didactic 86311-10 
+Symbol Description 
+Protective conductor terminal 
+Frame or chassis terminal 
+Equipotentiality 
+On (supply) 
+Off (supply) 
+Equipment protected throughout by double insulation or 
+reinforced insulation 
+In position of a bi-stable push control 
+Out position of a bi-stable push control © Festo Didactic 86311-10 V
+Table of Contents 
+Preface ................................................................................................................ XIII
+About This Manual .............................................................................................. XV
+To the Instructor ................................................................................................ XVII
+List of Equipment Required ................................................................................ XIX
+Unit 1 Satellite Communication Fundamentals ..................................... 1
+DISCUSSION OF FUNDAMENTALS......................................................... 1
+The concept of satellite communications .................................. 1
+Advantages and disadvantages of satellite 
+communications ........................................................................ 3
+Some milestones in satellite communications .......................... 4
+The capacity-cost relationship ................................................ 12
+Ex. 1-1 Satellite Communication Systems ............................................. 13
+DISCUSSION .................................................................................... 13
+Segmentation of a satellite communications system .............. 13
+Ground segment ........................................................................ 14
+Space segment .......................................................................... 17
+Control segment ........................................................................ 21
+Satellite communications services and frequency bands ....... 21
+Types of satellite services .......................................................... 21
+Quality of Service (QoS) ......................................................... 25
+The Satellite Communications Training System ..................... 25
+The Earth Station Transmitter .................................................... 26
+The Earth Station Receiver ........................................................ 27
+The Satellite Repeater ............................................................... 28
+Power Sensors .......................................................................... 29
+The Telemetry and Instrumentation Add-On .......................... 30
+Symbols and abbreviations used on the module front panels .... 32
+Frequency converters ................................................................ 33
+Signal levels ............................................................................ 34
+Safety with RF fields ............................................................... 35
+PROCEDURE .................................................................................... 37
+System startup ........................................................................ 37
+Connection Diagrams ................................................................ 38
+Optimizing antenna alignment ................................................ 40
+Measuring voltage and power .................................................... 41
+Analog communications .......................................................... 44
+Transmitting analog signals from external sources ................ 47
+Digital communications ........................................................... 50
+The QPSK Costas Loop in the Digital Demodulator .................. 50
+Transmitting digital signals ...................................................... 57
+Data transfer ........................................................................... 60Table of Contents 
+VI © Festo Didactic 86311-10 
+Ex. 1-2 Satellite Earth Stations ............................................................... 65
+DISCUSSION .................................................................................... 65
+Types of earth stations ............................................................ 65
+Transportability .......................................................................... 65
+Size ............................................................................................ 68
+Purpose ..................................................................................... 69
+Function ..................................................................................... 70
+Earth station organization ....................................................... 70
+Baseband section ...................................................................... 72
+IF section ................................................................................... 72
+RF section .................................................................................. 72
+Antenna subsystem ................................................................... 73
+The Earth Station Transmitter and Receiver .......................... 78
+Analog signal processing and modulation .................................. 79
+Digital signal processing and modulation ................................... 81
+Frequency conversion ................................................................ 84
+PROCEDURE .................................................................................... 85
+System startup ........................................................................ 85
+IF and RF frequencies and power levels ................................ 86
+Frequency converters ............................................................. 95
+Power Sensors ........................................................................ 95
+Ex. 1-3 Satellite Payloads and Telemetry ............................................... 99
+DISCUSSION .................................................................................... 99
+Functions and characteristics of the payload .......................... 99
+Repeater organization ........................................................... 100
+Transparent repeater ............................................................... 100
+Regenerative repeater ............................................................. 104
+Redundancy ............................................................................. 105
+Antennas ............................................................................... 106
+Telemetry, tracking and command (TTC) ............................. 107
+PROCEDURE .................................................................................. 108
+System startup ...................................................................... 108
+Repeater organization ........................................................... 109
+Repeater characteristics ....................................................... 110
+Telemetry with the Satellite Repeater (optional) ................... 116
+Unit 2 Analog Transmission ................................................................ 123
+DISCUSSION OF FUNDAMENTALS..................................................... 123
+Analog signals ....................................................................... 123
+Analog modulation ................................................................ 124
+Noise in communication channels ........................................ 125
+Improving link quality and efficiency ..................................... 125Table of Contents 
+© Festo Didactic 86311-10 VII
+Ex. 2-1 Analog Baseband Processing and Modulation ...................... 127
+DISCUSSION .................................................................................. 127
+FM modulation ...................................................................... 127
+FM spectra ............................................................................ 130
+Carson’s rule ......................................................................... 134
+FM demodulation .................................................................. 135
+Threshold effect and capture effect ...................................... 136
+Baseband processing............................................................ 136
+Pre-emphasis .......................................................................... 136
+Speech activation .................................................................... 138
+Companding ............................................................................ 138
+Energy dispersion .................................................................... 139
+Frequency division multiplexing ............................................... 139
+PROCEDURE .................................................................................. 139
+System startup ...................................................................... 139
+FM modulation ...................................................................... 140
+Unmodulated carrier ................................................................ 140
+Spectrum Analyzer Time Window setting ................................ 142
+Modulated carrier ..................................................................... 142
+Modulator sensitivity ................................................................ 144
+Carson’s rule ........................................................................... 146
+Demodulation threshold ........................................................... 150
+Pre-emphasis ........................................................................ 151
+Unit 3 Digital Transmission ................................................................. 163
+DISCUSSION OF FUNDAMENTALS..................................................... 163
+Digital signals ........................................................................ 163
+Sampling and quantization ...................................................... 164
+Analog-to-digital and digital-to-analog conversion ................... 165
+Serial and parallel transmission ............................................... 166
+Digital modulation .................................................................. 167
+M-ary signaling ...................................................................... 168
+Spectral efficiency ................................................................. 170
+Constellation diagrams.......................................................... 171
+Improving link quality and efficiency ..................................... 174
+Ex. 3-1 Digital Baseband Processing ................................................... 175
+DISCUSSION .................................................................................. 175
+Time division multiplexing (TDM) .......................................... 175
+The TDM MUX in the Earth Station Transmitter ...................... 177
+Scrambling ............................................................................ 177
+The purpose of data scrambling and descrambling ................. 177
+Scrambling and descrambling circuits ..................................... 178
+The choice of polynomial ......................................................... 179Table of Contents 
+VIII © Festo Didactic 86311-10 
+Descrambler impulse response ............................................ 180
+Clock Encoding ..................................................................... 181
+Other types of digital baseband processing .......................... 181
+Transmission rate of encoded signals .................................. 182
+The Clock & Frame Encoder in the Earth Station 
+Transmitter ............................................................................... 183
+PROCEDURE .................................................................................. 183
+System startup ...................................................................... 183
+Using the binary sequence generators ................................. 184
+Probe compensation adjustment .......................................... 184
+Time division multiplexing (TDM) .......................................... 186
+TDM MUX ................................................................................ 186
+TDM DEMUX ........................................................................... 203
+Clock and frame encoding .................................................... 206
+Scrambling ............................................................................ 212
+The effect of scrambling observed in the time domain ............. 213
+Determining the scrambler and descrambler polynomial ......... 215
+The effect of scrambling on the QPSK constellation ................ 218
+The effect of scrambling observed in the frequency domain .... 221
+Ex. 3-2 Digital Modulation ...................................................................... 223
+DISCUSSION .................................................................................. 223
+PSK digital modulation .......................................................... 223
+The M-ary PSK waveform ..................................................... 224
+QPSK constellations ............................................................. 224
+A typical QPSK modulator..................................................... 225
+Symbol rate and bandwidth .................................................. 227
+Demodulation and detection ................................................. 229
+QPSK demodulation .............................................................. 231
+Detection and conversion of the raw data signals ................ 233
+Carrier recovery .................................................................... 233
+PROCEDURE .................................................................................. 234
+System startup ...................................................................... 234
+Symbol generation ................................................................ 235
+The Serial to Parallel Converter ............................................... 237
+The Serial to Parallel Converter signals ................................... 239
+Differential encoding ............................................................. 243
+Level converters and low-pass filters .................................... 244
+Identifying the QPSK constellation points ............................. 246
+Digital demodulation .............................................................. 250
+Signal spectrum and bandwidth ............................................ 254Table of Contents 
+© Festo Didactic 86311-10 IX
+Ex. 3-3 Differential Encoding ................................................................ 261
+DISCUSSION .................................................................................. 261
+Phase ambiguity .................................................................... 261
+Differential encoding ............................................................. 262
+Differential QPSK (DQPSK) .................................................. 263
+Advantages and disadvantages of differential encoding .......... 265
+Differential encoding in the Earth Station Transmitter .............. 265
+PROCEDURE .................................................................................. 265
+Set up and connections ........................................................ 265
+Differential encoding ............................................................. 266
+Phase ambiguity .................................................................... 274
+Adjusting the receiver to minimize drift in the Costas loop ....... 278
+Observing phase ambiguity ..................................................... 281
+Unit 4 Troubleshooting ........................................................................ 291
+DISCUSSION OF FUNDAMENTALS..................................................... 291
+Troubleshooting communications equipment ....................... 291
+Troubleshooting activities ..................................................... 291
+Ex. 4-1 Troubleshooting the Earth Station Transmitter ..................... 293
+DISCUSSION .................................................................................. 293
+Signal flow tracing ................................................................. 293
+The divide-in-half method ..................................................... 294
+A systematic troubleshooting procedure ............................... 295
+Troubleshooting the Earth Station Transmitter ..................... 295
+PROCEDURE .................................................................................. 296
+System startup ...................................................................... 296
+Observing normal operation .................................................. 297
+Troubleshooting an unknown fault ........................................ 297
+Ex. 4-2 Troubleshooting the Earth Station Receiver .......................... 301
+DISCUSSION .................................................................................. 301
+Troubleshooting the Earth Station Receiver ......................... 301
+PROCEDURE .................................................................................. 301
+System startup ...................................................................... 301
+Observing normal operation .................................................. 302
+Troubleshooting an unknown fault ........................................ 303
+Ex. 4-3 Troubleshooting the Satellite Repeater using Telemetry ...... 307
+DISCUSSION .................................................................................. 307
+Troubleshooting the Satellite Repeater................................. 307Table of Contents 
+X © Festo Didactic 86311-10 
+PROCEDURE .................................................................................. 307
+System startup ...................................................................... 307
+Observing normal operation .................................................. 308
+Troubleshooting an unknown fault ........................................ 309
+Ex. 4-4 Troubleshooting a Satellite Communication Link .................. 311
+DISCUSSION .................................................................................. 311
+Troubleshooting a satellite communication link .................... 311
+PROCEDURE .................................................................................. 311
+System startup ...................................................................... 311
+Observing normal operation .................................................. 312
+Troubleshooting an unknown fault ........................................ 313
+Appendix A Glossary of New Terms ............................................................. 317
+Appendix B Setting Up the Satellite Communications Training System .. 329
+Set up the modules ............................................................... 330
+Align the antennas ................................................................ 334
+Connect the power supplies .................................................. 334
+USB connections to the Telemetry and Instrumentation 
+Add-On .................................................................................. 335
+Appendix C Care of Microwave Cables ........................................................ 337
+Appendix D Using the Telemetry and Instrumentation Add-On ................ 339
+Virtual Instruments ................................................................ 339
+Data Generation/Acquisition Interface .................................. 339
+Spectrum Analyzer Interface .................................................... 340
+Digital Inputs ............................................................................ 341
+Digital Outputs ......................................................................... 341
+USB Connectors ...................................................................... 341
+Virtual Instrument package ................................................... 342
+Using the Binary Sequence Generators ............................... 343
+Symbols used in the manuals .................................................. 343
+Generator Settings ................................................................... 344
+Digital Output Settings and connections .................................. 345
+Using the Waveform Generator ............................................ 347
+Symbol used in the manuals .................................................... 347
+Settings and connections ......................................................... 347
+Using the Oscilloscope .......................................................... 348
+Symbols used in the manuals .................................................. 348
+Settings and connections ......................................................... 349
+Using the Spectrum Analyzer ............................................... 350
+Symbol used in the manuals .................................................... 350
+Settings and connections ......................................................... 350Table of Contents 
+© Festo Didactic 86311-10 XI
+Using the True RMS Voltmeter / Power Meter ..................... 353
+Symbols used in the manuals .................................................. 353
+Settings and connections ......................................................... 353
+Using the Bit Error Ratio Tester ............................................ 354
+Symbol used in the manuals .................................................... 355
+Settings and connections ......................................................... 355
+Appendix E Using Conventional Instruments ............................................. 357
+Instrument symbols and terms .............................................. 357
+Signal levels in the Satellite Communications Training 
+System .................................................................................. 357
+Power Sensors ...................................................................... 359
+Oscilloscope .......................................................................... 360
+Spectrum analyzer ................................................................ 361
+Analog waveform generator .................................................. 362
+Binary sequence generators ................................................. 362
+Appendix F Satellite Transponders .............................................................. 363
+Appendix G Bessel Coefficients for FM Modulation ................................... 369
+Appendix H System Faults for Troubleshooting ......................................... 373
+Index of New Terms ........................................................................................... 375
+Acronyms ........................................................................................................... 379
+Bibliography ....................................................................................................... 381© Festo Didactic 86311-10 XIII
+Preface 
+Since the Soviet Union shocked the western world by launching the first artificial 
+satellite, SPUTNIK I, on October 4, 1957, the science of satellites and satellite 
+communications has undergone an amazing evolution. Today satellites play an 
+essential role in global communications including telephony, data networking, 
+video transporting and distribution, as well as television and radio broadcasting 
+directly to the consumer. They fulfill critical missions for governments, the military 
+and other organizations that require reliable communications links throughout the 
+world, and generate billions of dollars annually in revenue for private enterprise. 
+Communications satellites offer several important advantages over other types of 
+long-range communications systems: the capability of direct communication 
+between two points on earth with only one intermediate relay (the satellite), the 
+ability to broadcast or collect signals and data to or from any area ranging up to 
+the entire surface of the world, and the ability to provide services to remote 
+regions where ground-based, point-to-point communications would be impractical 
+or impossible. 
+One of the greatest advantages of satellite communications systems is the ratio 
+of capacity versus cost. Although satellites are expensive to develop, launch and 
+maintain, their tremendous capacity makes them very attractive for many 
+applications. INTELSAT I, launched in 1965, had a capacity of only 240 two-way 
+telephone channels or one two-way television channel, and an annual cost of 
+$32 500 per channel. Since then, the capacity and lifetime of communication 
+satellites have increased tremendously resulting in a drastic reduction in the cost 
+per channel. Communications satellites now have capacities sufficient for several 
+hundred video channels or tens of thousands of voice or data links. 
+In addition to applications designed specifically for communications purposes, 
+satellites are used extensively for navigation systems, scientific research, 
+mapping, remote sensing, military reconnaissance, disaster detection and relief 
+and for many other applications. All of these applications, however, require at 
+least one communications link between the satellite and one or more earth 
+stations. 
+The Satellite Communications Training System is a state-of-the-art training 
+system for the field of satellite communications. Specifically designed for handson training, the system covers modern satellite communication technologies 
+including analog and digital modulation. It is designed to use realistic satellite 
+uplink and downlink frequencies at safe power levels and to reflect the standards 
+commonly used in modern satellite communications systems. 
+The Orbit Simulator provides interactive visualization of satellite orbital 
+mechanics and coverage, and the theory behind antenna alignment with 
+geostationary satellites. The optional Dish Antenna and Accessories provides 
+hands-on experience in aligning a typical antenna with real geostationary 
+satellites. Preface 
+XIV © Festo Didactic 86311-10 
+We invite readers of this manual to send us their tips, feedback, and 
+suggestions for improving the book. 
+Please send these to did@de.festo.com. 
+The authors and Festo Didactic look forward to your comments. © Festo Didactic 86311-10 XV
+About This Manual 
+Manual Objective 
+When you have completed this manual, you will be familiar with the principles of 
+satellite communications. You will be familiar with the different segments of a 
+satellite communications system and the main components and characteristics of 
+each segment. 
+You will be familiar with the main baseband processing and 
+modulation/demodulation techniques used in both analog and digital satellite 
+communications. You will also be familiar with the basic troubleshooting 
+techniques applicable to satellite communication systems including remote 
+troubleshooting of the satellite repeater using telemetry. 
+Description 
+Each exercise contains: 
+x A clearly defined Exercise Objective 
+x A Discussion Outline listing the main points presented in the Discussion 
+x A Discussion of the theory involved 
+x A Procedure Outline listing the main sections in the Procedure 
+x A step-by-step Procedure in which the student observes and measures 
+the important phenomena, including questions to help in understanding 
+the important principles. 
+x A Conclusion 
+x Review Questions 
+a In this manual, all New Terms are defined in the Glossary of New Terms. In 
+addition, an index of New Terms is provided at the end of this manual. 
+Systems of units 
+Units are expressed using the SI system of units. 
+Safety considerations 
+Safety symbols that may be used in this manual and on the equipment are listed 
+in the Safety Symbols table at the beginning of the manual. 
+Safety procedures related to the tasks that you will be asked to perform are 
+indicated in each exercise. 
+Make sure that you are wearing appropriate protective equipment when 
+performing the tasks. You should never perform a task if you have any reason to 
+think that a manipulation could be dangerous for you or your teammates. 
+When studying communications systems, it is very important to develop good 
+safety habits. Although microwaves are invisible, they can be dangerous at high About This Manual 
+XVI © Festo Didactic 86311-10 
+levels or for long exposure times. The most important safety rule when working 
+with microwave equipment is to avoid exposure to dangerous radiation levels. 
+The radiation levels in the Satellite Communications Training System are too low 
+to be dangerous. The highest power level in the system is at the RF OUTPUT of 
+the Earth Station Transmitter and is typically 5 dBm (approximately 3.2 mW) at 
+11 GHz. The maximum power density that can be produced by the Satellite 
+Communications Training System using the supplied equipment is approximately 
+0.13 mW/cm2, well below all Canadian, American and European standards for 
+both microwave exposed workers and the general public. 
+c For more detailed information, refer to the section Safety with RF fields of this 
+manual. © Festo Didactic 86311-10 XVII
+To the Instructor 
+You will find in this Instructor Guide all the elements included in the Student 
+Manual together with the answers to all questions, results of measurements, 
+graphs, explanations, suggestions, and, in some cases, instructions to help you 
+guide the students through their learning process. All the information that applies 
+to you is placed between markers and appears in red. 
+Accuracy of measurements 
+The numerical results of the hands-on exercises may differ from one student to 
+another. For this reason, the results and answers given in this manual should be 
+considered as a guide. Students who correctly performed the exercises should 
+expect to demonstrate the principles involved and make observations and 
+measurements similar to those given as answers. © Festo Didactic 86311-10 XIX
+List of Equipment Required 
+Satellite Communications Training System 
+The following equipment and software is included in the Satellite 
+Communications Training System and is required to perform the procedures in 
+this manual: 
+Qty Description Model
+1 Earth Station Transmitter 9570 
+1 Earth Station Receiver 9571 
+1 Satellite Repeater 9572 
+1 Accessories 9579 
+1 Orbit Simulator and Software Suite1 9581 
+a The Orbit Simulator and Software Suite consists of three applications: 
+x Orbit Simulator 
+x Telemetry and Instrumentation 
+x Data Transfer 
+1 The Data Transfer application is used in this manual. If you have the optional 
+Telemetry and Instrumentation Add-On, the Telemetry and Instrumentation 
+application is also used. 
+Optional equipment 
+Qty Description Model
+1 Telemetry and Instrumentation Add-On 8093-1 
+This Add-On consists of two modules, the Data Generation/Acquisition Interface, 
+Model 9573, and the Virtual Instrument Package, Model 1250-A0. These 
+modules, along with the Telemetry and Instrumentation application, provide a 
+telemetry interface with the Satellite Repeater as well as a full suite of virtual 
+instruments. 
+a Telemetry with the Satellite Receiver is only possible using the Telemetry and 
+Instrumentation Add-On. 
+If the Telemetry and Instrumentation Add-On is not purchased, conventional 
+instruments must be supplied by the user (see Conventional instruments
+below). 
+a If you have the Telemetry and Instrumentation Add-On, a conventional 
+dc voltmeter (or multimeter) would also be useful, but is not essential, for part 
+of Exercise 3-3. List of Equipment Required 
+XX © Festo Didactic 86311-10 
+Conventional instruments 
+The following conventional instruments can be used instead of the Telemetry and 
+Instrumentation Add-On: 
+Qty Description Minimal specifications and notes
+1 Oscilloscope Frequency range: 0 – 100 MHz 
+1 Spectrum Analyzer Frequency range: near 0 – 11.26 GHz 
+1 Waveform Generator 
+(function generator) 
+Functions: Sine 
+White noise (optional) 
+Output Level: 0 – 1 V 
+1 to 3 
+Binary Sequence 
+Generators 
+(data generators) 
+Bit rate: 10 kbit/s – 20 Mbit/s 
+Modes: PRBS (variable length) 
+User entry (1 to 32 bits) 
+Clock: External input 
+Outputs: Data 
+Sync. (one pulse per sequence) 
+1 DC Voltmeter 
+(or multimeter) 
+For measuring the dc voltage at the POWER SENSOR 
+OUTPUTs. 
+Computer requirements 
+The software requires a current model computer running Windows® 7, Windows®
+Vista or Windows® XP. 
+a The Satellite Communications Host Computer, Model 9695-B0, meets or 
+exceeds these requirements. List of Equipment Required 
+© Festo Didactic 86311-10 XXI
+System configurations and capabilities 
+The following table gives different system configurations and shows the 
+capabilities of each configuration: 
+This product: Plus these items: 
+Provide these 
+Satellite Communications Capabilities: 
+Analog/digital satellite link, 
+signal display and 
+measurement, troubleshooting 
+the transmitter and receiver 
+Data 
+transfer 
+Telemetry, 
+troubleshooting the 
+repeater, virtual 
+instrumentation 
+Satellite 
+Communications 
+Training System
+x Telemetry and 
+Instrumentation Add-On 
+x Computer 
+9 9 9
+x User-supplied 
+conventional instruments 
+x Computer 
+9 9
+x User-supplied 
+conventional instruments 
+(no computer) 
+9 
+a When performing data transfer using one computer, the data sent from the 
+computer is transmitted over the satellite link and received by the same 
+computer. The Data Transfer software allows using two computers, a sending 
+computer connected to the Earth Station Transmitter and a receiving computer 
+connected to the Earth Station Receiver. Sample Exercise 
+Extracted from 
+the Student Manual 
+and the Instructor Guide© Festo Didactic 86311-10 13
+When you have completed this exercise, you will be familiar with the basic 
+concepts of satellite communications systems, including the different segments 
+of a satellite communications system, the main types of services provided and 
+the frequency bands used. In addition, you will be familiar with the Satellite 
+Communications Training System. 
+The Discussion of this exercise covers the following points: 
+ Segmentation of a satellite communications system
+ Satellite communications services and frequency bands
+ Quality of Service (QoS)
+ The Satellite Communications Training System
+ The Telemetry and Instrumentation Add-On
+ Signal levels
+ Safety with RF fields
+Segmentation of a satellite communications system 
+A satellite communications system is a complex system that consists of many 
+different elements. The system requires the constant attention of many skilled 
+people in order to remain operational. 
+A typical system can be divided into three distinct segments (see Figure 1-11). 
+ The ground segment (GS) consists of the earth stations and other groundbased facilities used for communications traffic. With some systems, such as 
+with the global positioning system (GPS), broadcasting satellite service 
+(BSS) systems — also called direct broadcasting service (DBS), very small 
+aperture terminal (VSAT) networks, and some military satellites, earth 
+stations consist entirely of user terminals that interface directly with the space 
+segment. In this case, the ground segment may be called the user segment 
+(US). 
+ The space segment (SS) consists of one or more satellites in space, 
+including both active and spare satellites. A group of active satellites is said 
+to form a constellation. The launch vehicle and all of the facilities required to 
+launch satellites and place them in orbit are also considered part of the 
+space segment. 
+ The control segment (CS) includes all of the ground equipment and 
+facilities that are required for operation, control, monitoring and management 
+of the space segment and, in many systems, management of the terrestrial 
+network. 
+Satellite Communication Systems 
+Exercise 1-1
+EXERCISE OBJECTIVE
+DISCUSSION OUTLINE
+DISCUSSIONEx. 1-1 – Satellite Communication Systems  Discussion
+14 © Festo Didactic 86311-10 
+Information is transmitted over free-space links. A one-way link from the ground 
+to the satellite is called an uplink. A link from the satellite to the ground is a 
+downlink. 
+Figure 1-11. Satellite communications system segments. 
+Ground segment 
+The ground segment consists of all of the traffic earth stations in the system. 
+These earth stations may be of several types, and the ‘size’ of the stations (that 
+is, the diameter of the antenna) may range from very small (a few centimeters) to 
+Interface 
+Station Service Station 
+(hub/feeder) 
+Terrestrial 
+Network 
+User 
+Terminals
+Service 
+Providers 
+Handset 
+VSAT 
+BSS (DBS ) 
+Subscriber
+TTC 
+Network 
+Management
+CONTROL 
+SEGMENT
+GROUND 
+SEGMENT
+SPACE 
+SEGMENT 
+Downlink 
+Uplink Ex. 1-1 – Satellite Communication Systems  Discussion
+© Festo Didactic 86311-10 15
+very large (tens of meters), depending on the application and the types of 
+services offered by the system. 
+There are three basic types of earth stations, as shown in Figure 1-11. A satellite 
+communications system may include a combination of these types: 
+ User stations are user terminals that interface directly with the space 
+segment. These include very small aperture terminals (VSATs) with 
+antenna sizes ranging below 3 m, ultra small aperture terminals (USATs)
+with antenna sizes under 0.5 m, mobile units and handsets as well as 
+receiving terminals for Broadcasting Satellite Service (BSS), also known as 
+Direct Broadcast Service (DBS) or Direct-to-Home (DTH). 
+ Interface stations act as gateways between the space segment and a 
+terrestrial network to which user terminals are attached. Today, these 
+interface stations are typically from 2 to 10 m in size. Early INTELSAT earth 
+stations in the mid ‘60s measured up to 30 m. 
+ Service stations act as an interface between the space segment and a 
+terrestrial service provider. A connection between a service provider and the 
+users usually goes through a feeder station (for broadcasting services, etc.) 
+or a hub (for collecting services). 
+A one-way connection from a user terminal through all associated ground 
+facilities, the ground segment, and the space segment, back to the ground 
+segment and to another user terminal, is called a simplex connection. Two-way 
+communication requires a duplex connection consisting of two simplex 
+connections, one for each direction. 
+In any communications system, the signal is the voltage or waveform that 
+conveys information from one user terminal to another. The adjective baseband
+is used to describe signals whose range of frequencies is measured from 
+approximately 0 Hz to the highest frequency in the signal. The baseband signal
+is therefore the signal that initially represents the information one wants to 
+convey. The baseband signal can either be analog (taking on any value within a 
+given range) or digital (taking on a finite number of discrete values). 
+At the transmitting earth station, the baseband signal is used to modulate a 
+sinusoidal carrier. The modulation technique used depends on the type of 
+baseband signal being transmitted. To transmit an analog baseband signal, 
+analog modulation, usually FM, is used. To transmit a digital baseband signal, 
+digital modulation, usually a form of phase-shift keying (PSK), is used. 
+The modulation process shifts the baseband signal up in frequency so that it is 
+centered on the frequency of the carrier and filters it so that it occupies only the 
+necessary frequency range. This range is called the intermediate 
+frequency (IF). This signal is usually shifted to a higher frequency (up 
+conversion) one or more times to the radio frequency (RF). With satellite 
+communications, the RF band for a particular earth station is typically 
+somewhere between 1 and 30 GHz. Using high frequencies reduces atmospheric 
+attenuation and allows constructing high gain antennas of reasonable size. Ex. 1-1 – Satellite Communication Systems  Discussion
+16 © Festo Didactic 86311-10 
+The earth station antenna transmits the RF signal to the satellite repeater. The 
+repeater retransmits the signal to one or several earth stations. At the receiving 
+earth station, the received RF signal is shifted to a lower frequency (down 
+conversion) in one or more stages to an IF frequency. The IF signal is then 
+demodulated in order to recover the original baseband signal. 
+Information is transmitted over the uplink and downlink using modulated carriers. 
+In many cases, each carrier can carry several signals simultaneously by the use 
+of time division multiplexing (TDM) or frequency division multiplexing (FDM). 
+Each carrier, therefore, can be considered to provide a number of channels. The 
+signals are multiplexed in the baseband into a single signal that modulates a 
+carrier which is transmitted to the satellite and relayed to another earth station. 
+This is referred to as multiple channels per carrier (MCPC) (sometimes called 
+multiple connections per carrier). The modulated carrier usually occupies the 
+entire bandwidth of one transponder. 
+MCPC using FDM can be used to transmit multiplexed analog voice signals. 
+MCPC using TDM is used to transmit multiplexed digital signals, such as digital 
+television channels for direct broadcasting to subscribers. 
+When there is no baseband multiplexing, each carrier provides only one channel. 
+This arrangement is called single channel per carrier (SCPC) (sometimes 
+called single connection per carrier). It is much simpler than MCPC and is 
+frequently used to transmit analog television signals. It is typically used for feeds 
+rather than for direct programming. With SCPC, a channel often provides a 
+dedicated, permanent connection between two earth stations. 
+Table 1-1 shows some of the advantages and disadvantages of SCPC and 
+MCPC. 
+Table 1-1. Comparison of SCPC and MCPC. 
+SCPC MCPC 
+Advantages 
+ Uses simple and reliable technology and 
+low-cost earth station equipment. 
+ One connection can use any bandwidth up 
+to the full bandwidth of a transponder. 
+ Easy to uplink from multiple transmitting 
+earth stations to the same transponder. 
+ Easy to add additional receiving earth 
+stations. 
+ More efficient use of available bandwidth. 
+Many multiplexed signals can be 
+transmitted using one carrier that occupies 
+the full bandwidth of a transponder. No 
+guard bands are required. 
+ Does not require a dedicated channel for 
+each connection. 
+ Ideal for burst transmissions such as 
+packet data transmission. 
+Disadvantages 
+ Less efficient use of bandwidth. Guard 
+bands must be used when a transponder is 
+shared by multiple carriers in order to 
+prevent mutual interference. 
+ Inefficient for burst transmission. 
+ Customer pays for a dedicated connection 
+even when it is not being used, unless 
+SCPC DAMA is implemented. 
+ All signals are multiplexed at one location 
+and demultiplexed at another location. This 
+requires a network infrastructure. 
+The overall downlink bandwidth of a satellite repeater 
+is usually split into several 
+sub-bands by a set of filters 
+and each sub-band is amplified separately. One subband is referred to as a 
+satellite channel and the 
+equipment related to this 
+sub-band is called a transponder, a combination of 
+the words transmitter and 
+responder. Ex. 1-1 – Satellite Communication Systems  Discussion
+© Festo Didactic 86311-10 17
+With single channel per carrier (SCPC), the bandwidth of a modulated carrier 
+may be less than the bandwidth of one transponder. In this case, other 
+modulated carriers of somewhat different frequencies can pass through the same 
+transponder, providing a guard band is left between each of the modulated 
+signals so that their frequency ranges do not overlap. Using different carrier 
+frequencies to give several signals simultaneous access to the same transponder 
+is called frequency division multiple access. 
+When a dedicated connection is not required, an SCPC connection can be 
+established temporarily for communications between two earth stations and then 
+terminated at the end of the communication. This arrangement, called SCPC 
+demand assigned multiple access (SCPC DAMA), allows the carrier to be 
+used by different parties one at a time. 
+Another type of multiple access is called time division multiple access 
+(TDMA). At each earth station, a TDMA terminal divides access to the satellite 
+into regular time slots. During each time slot, a burst of data from a particular 
+source is transmitted from one earth station to one of the satellite transponders. 
+The transponder retransmits the burst to another earth station where a TDMA 
+terminal routes the data to the correct destination. A buffer memory at each 
+TDMA terminal allows continuous data transfer with the terrestrial network. 
+Space segment 
+There are many different types of satellites providing a wide variety of capabilities 
+and services. All satellites, however, have two main subsystems: the payload 
+and the platform. The payload consists of all the equipment on the satellites that 
+carries out the mission of the satellite. On a communication satellite, the payload 
+consists of all the components that provide communications services, that is, 
+which receive, process, amplify and retransmit information. The payload can be 
+divided into two parts: the antennas and the repeater. 
+An antenna is a conductive structure designed to receive and transmit 
+electromagnetic energy. The satellite antennas serve as interfaces between the 
+uplink and downlink signals and the components inside the satellite. Antennas 
+may be designed for different types of coverage, a term that designates the area 
+on the earth where communication with the satellite is possible. With global 
+coverage, communication is possible with roughly all points on earth that are 
+visible from the satellite. With reduced coverage (zone coverage or spot 
+coverage), the coverage is concentrated on a particular region of the visible earth 
+in order to make efficient use of the available power (see Figure 1-12). Ex. 1-1 – Satellite Communication Systems  Discussion
+18 © Festo Didactic 86311-10 
+Figure 1-12. Global, zone, and spot coverage of a geostationary satellite. 
+Spot coverage antennas may have fixed or steerable beams. Where the 
+coverage must be contoured to cover an arbitrary region, such as a continent, 
+multiple beam antennas can be used. 
+Besides the antennas, the remaining components of the payload make up the 
+repeater. There are two main types of repeater for a communications satellite: 
+transparent and regenerative. A transparent repeater (or transparent payload) 
+does not demodulate the uplink signal. Instead, it simply shifts the uplink signal to 
+a different frequency (usually a lower frequency) and amplifies it for 
+retransmission over the downlink. 
+The elevation is the angle 
+that an antenna must be 
+raised above the horizon in 
+order to point directly at the 
+satellite. 
+The term repeater originated with telegraphy and 
+referred to an electromechanical device used to 
+regenerate telegraph signals. Use of the term has 
+continued in telephony, data 
+communications and satellite communications. 
+Equator
+Elevation 
+(degrees)
+Hemispheric 
+Coverage 
+Spot 
+Coverage 
+Global 
+Coverage
+Zone 
+Coverage 
+Satellite latitude 
+0
+30 W 
+Satellite longitudeEx. 1-1 – Satellite Communication Systems  Discussion
+© Festo Didactic 86311-10 19
+Mixer Amplifier 
+Local oscillator Band-pass filter 
+Figure 1-13.	 Transparent payload or repeater. 
+Figure 1-13 shows a simplified block diagram of a transparent repeater. The 
+uplink signal from the antenna is amplified and then down-converted to the 
+downlink frequency range in order to prevent the strong downlink signal from 
+interfering with the weak uplink signal. The overall downlink bandwidth of a 
+satellite repeater is usually split into several sub-bands by a set of filters and 
+each sub-band is amplified separately. One sub-band is referred to as a satellite 
+channel and the equipment related to this sub-band is called a transponder, a 
+combination of the words transmitter and responder. Each transponder usually 
+has sufficient bandwidth for a number of carriers at different frequencies or for 
+one wideband multiplexed signal. (See Appendix F Satellite Transponders for an 
+example of the frequencies, polarizations and channels of a typical satellite.) 
+Filters and other components are used to reject out-of-band noise and 
+interference and to improve performance. The power gain of each transponder is 
+of the order of 100 to 130 dB and typically raises the power of the uplink signal 
+from a few hundred picowatts to the downlink power of roughly ten to one 
+hundred watts. When multi-beam antennas are used, the routing of signals from 
+one up beam to a given down beam is done at the RF frequency. 
+A regenerative repeater (or regenerative payload) demodulates the uplink 
+signal to recover the baseband signals, carries out baseband signal processing 
+and switching, and then remodulates the baseband signals with a carrier at the 
+downlink frequency (different from the uplink frequency) before power 
+amplification and retransmission (see Figure 1-14). Although this is more 
+complex and costly than a transparent payload, it allows onboard processing and 
+signal routing at the baseband. 
+Uplink Antenna 
+Low-Noise 
+Amplifier
+Frequency 
+Down converter
+Band-pass Filter Power Amplifier 
+Downlink Antenna
+TransponderEx. 1-1 – Satellite Communication Systems  Discussion
+20 © Festo Didactic 86311-10 
+Amplifier PSK Demodulator 
+Frequency Down converter (simplified) PSK Modulator 
+Figure 1-14. Regenerative payload. 
+Analog satellite communication systems are exclusively the regenerative type. 
+Digital systems may use either type. 
+The platform, often called the bus, consists of all the components that permit the 
+payload to operate and remain operational over a long period of time. The 
+platform provides the mechanical structure of the satellite, supplies electrical 
+power to the payload, and has propulsion and control systems used to maintain 
+the satellite in the desired orbit and attitude as well as a system to maintain 
+thermal stability. The platform also has provision for two-way communication with 
+the control segment. 
+The most common type of electrical power system in a satellite consists of a 
+combination of solar cells and rechargeable batteries. Solar irradiance varies 
+over time due to variations in sun spot activity and other factors. On the average, 
+its value is roughly 1370 W/m2 (130 W per square foot). Since solar cells have 
+only limited efficiency (approximately 15% for conventional silicon solar cells), 
+satellites requiring high power must have a large area of solar cells. Batteries are 
+required because the satellite spends some time in a state of eclipse, that is, in 
+the earth’s or the moon’s shadow. For a geostationary satellite, eclipses occur 
+during two 45 day periods per year and can have a duration as long as 72 
+minutes. Low earth orbit satellites can spend up to 50% of their time in eclipses 
+of shorter duration (30 to 40 minutes). 
+The attitude of a satellite is 
+its orientation with respect 
+to a given frame of reference. Attitude control can 
+be done by making the 
+satellite spin or by using an 
+internal gyroscope and 
+thrusters to stabilize it in 
+three axes. 
+MOD 
+DEMOD
+DEMOD
+DEMOD
+DEMOD
+DEMOD
+MOD
+MOD
+MOD
+MOD
+Baseband 
+Processing 
+and 
+Switching 
+Multi-beam 
+Uplink Antenna 
+Multi-beam 
+Downlink Antenna Ex. 1-1 – Satellite Communication Systems  Discussion
+© Festo Didactic 86311-10 21
+Control segment 
+The control segment consists of ground facilities used for platform and payload 
+monitoring and control as well as management of communications traffic and of 
+the various communications resources of the satellites. Platform and payload 
+monitoring and control are accomplished using tracking, telemetry and 
+command (TTC or TT&C) (sometimes called tracking, telemetry and control). It 
+may also be referred to as tracking, telemetry, command and monitoring 
+(TTC&M). 
+The TTC system performs the following functions: 
+Tracking: Detecting the precise location of the satellite. 
+Telemetry: Monitoring the status of the various components of the payload 
+and of the platform, acquiring confirmation of commands, and 
+transmitting this information to the control segment on the ground. 
+Command: Receiving signals from the control segment on the ground in order 
+to control onboard equipment and to initiate maneuvers. 
+Satellite communications services and frequency bands 
+Types of satellite services 
+Although the radio frequency portion of the electromagnetic spectrum covers a 
+vast range of frequencies, only a portion of this range is suitable for satellite 
+communications. Below approximately 100 MHz, the ionosphere causes a high 
+degree of attenuation. In addition, the spectrum between 300 MHz and 1 GHz is 
+exceedingly crowded with terrestrial applications, which could result in 
+interference between different applications. 
+The choice of the frequency band for satellite communications involves a tradeoff between several constraints. In general, the lower the frequency band, the 
+better the propagation characteristics, but the higher the frequency band, the 
+greater the available bandwidth. For some applications, such as Mobile Satellite 
+Services (MSS), the propagation characteristics are crucial and the bandwidth 
+required by each service is relatively small, so lower frequency bands are 
+generally used. Other applications, such as direct-to-home (DTH) broadcasting 
+and broadband data services, are only practical in higher frequency bands 
+because of the large bandwidth required. With these higher frequency bands, 
+antennas are more directional. Directional antennas offer the added benefit of 
+using spatial separation to avoid interference between links using the same 
+frequency. 
+Frequency bands are referred to using adjectives or letter designations. 
+Table 1-2 shows adjectival designations for frequency bands used in satellite 
+communications. Ex. 1-1 – Satellite Communication Systems  Discussion
+22 © Festo Didactic 86311-10 
+Table 1-2. Frequency band adjectival designations. 
+Band Full Name Frequency Range Unit 
+VHF Very High Frequency 30 – 300 MHz 
+UHF Ultra High Frequency 0.3 – 3 GHz 
+SHF Super High Frequency 3 – 30 GHz 
+EHS Extremely High Frequency 30 – 300 GHz 
+Letter designations for frequency bands originated during early microwave 
+research and are still frequency used for frequencies over 1 GHz. Table 1-3 
+provides a summary of the frequency bands commonly used in satellite 
+communications. 
+Table 1-3. Frequency bands used in satellite communications. 
+Band Frequency Range Unit 
+VHF 30 – 300 MHz 
+UHF 300 – 1000 MHz 
+L 1 – 2 GHz 
+S 2 – 4 GHz 
+C 4 – 8 GHz 
+X 8 – 12 
+ 8 – 12.5* GHz 
+Ku 12 – 18 
+ 12.5 – 18* GHz 
+K 18 – 27 
+ 18 – 26.5* GHz 
+Ka 27 – 40 
+ 26.5 – 40* GHz 
+Q 40 – 60 GHz 
+V 60 – 75 GHz 
+W 75 – 110 GHz 
+* in North America 
+a The frequency ranges shown in Table 1-3 and Table 1-4 should be considered 
+as being approximate. Some references give slightly different limits for certain 
+bands. Ex. 1-1 – Satellite Communication Systems  Discussion
+© Festo Didactic 86311-10 23
+The usage of radio frequencies for different services is regulated by the 
+International Telecommunication Union (ITU), a United Nations organization. The 
+ITU publishes Radio Regulations (RR) which refer to the following types of 
+satellite services: 
+ Fixed Satellite Service (FSS): A satellite service that uses fixed 
+terrestrial terminals. In other words, FSS is any satellite service where 
+the ground station does not change locations frequently. Examples are: 
+ Point-to-point communications 
+ Corporate networks 
+ Very small aperture terminal (VSAT) terminals 
+ Transportable terminals that remain fixed during use, such as 
+satellite newsgathering (SNG) terminals 
+ Mobile Satellite Service (MSS): A satellite service that uses portable 
+terrestrial terminals, mainly for telephone communications. MSS 
+terminals may be mounted on a ship, an airplane, or a vehicle, or, as 
+with portable satellite telephones, may even be carried by a person. The 
+major supplier of MSS services is INMARSAT. MSS services are divided 
+into three main categories: 
+ Maritime Mobile Satellite Service (MMSS) 
+ Aeronautical Mobile Satellite Service (AMSS) 
+ Land Mobile Satellite Service (LMSS) 
+ Broadcasting Satellite Service (BSS): A type of Fixed Satellite Service 
+used to provide audio and video entertainment directly to consumers. 
+The terms Direct Broadcast Satellite or Direct Broadcast Service (DBS), 
+or Direct-to-Home (DTH) are also used. 
+ BSS-TV is designed to provide conventional television signals 
+directly to the consumer. 
+ BSS-HDTV is designed to provide high-definition television signals 
+directly to the consumer. 
+ BSS-Sound is designed to provide high quality audio signals to fixed 
+and mobile consumer terminals. The term satellite digital audio radio 
+service (SDARS) is also used. 
+ Other services: 
+ Space Operation Service (SOS): A radio communication service 
+concerned exclusively with the operation of spacecraft, in particular 
+tracking, telemetry and command. 
+ Amateur Satellite Service (ASS) or Amsat 
+ Earth Exploration Satellite Service (ESSS) 
+ Radio Determination Satellite Service (RSSS) 
+ Radio Navigation Satellite Service (RNSS) 
+ Space Research Service (SRS) 
+ Intersatellite Service (ISS) Ex. 1-1 – Satellite Communication Systems  Discussion
+24 © Festo Didactic 86311-10 
+The Radio Regulations specify detailed radio spectrum allotments for the 
+different services. These regulations are voluminous and very detailed. Table 1-4 
+provides a brief summary. Frequency bands are identified in this table using 
+letter or adjectival designations. Some bands are also referred to using 
+approximate uplink and downlink frequencies. For example, the “6/4 band” is 
+another name for the C-band. The names “13/11 band”, “13-14/11-12 band” and 
+“18/12 band” all refer to different segments of the Ku band. 
+Table 1-4. Satellite frequency allotments (ITU Radio Regulations). 
+Service Use Band 
+(Letter) 
+Band 
+(GHz up/down) 
+Typical Frequencies (GHz) 
+Uplink Downlink 
+Fixed Satellite 
+Service (FSS) 
+Older systems (e.g. 
+INTELSAT) C 6/4 5.85 – 7.075 3.4 – 4.2 
+Government X 8/7 7.90 – 8.40 7.25 – 7.75 
+Current operational 
+developments 
+(e.g. UTELSAT) 
+Ku 13/11 
+14/12 13.75 – 14.8 10.7 – 11.7 
+Offers large bandwidth 
+and little interference 
+due to current limited 
+use 
+Ka 30/20 28.0 – 30.0 17.7 – 19.7 
+Developing 
+technologies V 50/40 50 40 
+Mobile Satellite 
+Service (MSS) 
+Non-geostationary 
+systems 
+VHF 
+UHF 
+0.148 – 0.150 
+0.454 – 0.460 
+0.137 – 0.138 
+0.400 – 0.401 
+Mostly geostationary 
+systems 
+(e.g. INMARSAT) 
+L 1.626 – 1.66 1.525 – 1.56 
+Non-geostationary 
+satellite phone systems 
+(e.g. GLOBALSTAR) 
+L/S 1.61 – 1.625 (L) 2.483 – 2.5 (S) 
+International Mobile 
+Telecommunications2000 (IMT-2000) 
+S 1.98 – 2.01 2.17 – 2.20 
+Non-geostationary 
+systems S 2.65 – 2.69 2.5 – 2.54 
+Broadcasting Satellite Service (BSS) 
+S 2.67 – 2.69 2.5 – 2.52 
+Ku 18/12 17.7 – 18.2 11.2 – 12.2 
+Ka 25/22 24.75 – 25.25 21.4 – 22.0 
+Space Operations 
+Service (SOS) 
+Telemetry, tracking and 
+command (TTC) S 2.025 – 2.120 2.2 – 2.3 
+Most satellite communications systems operate in the C, X, Ku or Ka bands of 
+the microwave spectrum. These frequencies allow large bandwidth while 
+avoiding the crowded UHF frequencies and staying below the atmospheric 
+absorption of EHF frequencies. Satellite TV either operates in the C band for the Ex. 1-1 – Satellite Communication Systems  Discussion
+© Festo Didactic 86311-10 25
+traditional large dish fixed satellite service or Ku band for direct-broadcast 
+satellite. Military communications run primarily over X or Ku-band links, with Ka 
+band being increasingly used for VSAT communications and for Milstar (the 
+Military Strategic and Tactical Relay) system of the United States Air Force. 
+Quality of Service (QoS) 
+Ideally, the recovered baseband signal would be a perfect copy of the original 
+baseband signal and with no delay. In addition, communication would be 
+perfectly reliable with no interruption. In a practical communications system, 
+however, these ideals are never met. The recovered baseband signal contains 
+noise (analog signal) or bit errors (digital signal). There is a non-negligible delay 
+between the recovered signal and the original. Also, there may be periods when 
+transmission is not possible, that is, when the communications channel is not 
+available. The term quality of service (QoS) refers to quantitative 
+measurements of the performance, delay and availability provided by the system. 
+Required QoS levels are often specified in a service level agreement (SLA), a 
+contract between a service provider and its customer that defines the minimum 
+QoS needed for customer application performance. 
+For an analog baseband signal, performance is measured in terms of the signal 
+to noise ratio (S/N). For a digital baseband signal, it is measured in terms of bit 
+error ratio or bit error rate (BER). Delay is measured in milliseconds, and 
+availability is the fraction of time during which the communications service is 
+provided with the desired performance. 
+c Factors that affect the quality of service in a satellite communications system 
+are covered in detail in the manual Link Characteristics and Performance. 
+The Satellite Communications Training System 
+The Satellite Communications Training System is a state-of-the-art training 
+system for the field of satellite communications. Specifically designed for handson training, the system covers modern satellite communication technologies 
+including analog and digital modulation. It is designed to use realistic satellite 
+uplink and downlink frequencies at safe power levels and to reflect the standards 
+commonly used in modern satellite communications systems. 
+The Satellite Communications Training System includes three RF modules: the 
+Earth Station Transmitter, the Earth Station Receiver, and the Satellite Repeater. 
+The Earth Station Transmitter and the Earth Station Receiver are designed to 
+teach both wideband analog and high-speed digital baseband processing and 
+modulation/demodulation techniques as well as frequency conversion between 
+the intermediate and RF frequencies. The Satellite Repeater is designed to teach 
+the operation of a transparent repeater. 
+Two other modules, the Data Generation/Acquisition Interface and the Virtual 
+Instrument, are part of the optional Telemetry and Instrumentation Add-On. Ex. 1-1 – Satellite Communication Systems  Discussion
+26 © Festo Didactic 86311-10 
+The Earth Station Transmitter 
+Figure 1-15. The Earth Station Transmitter. 
+The Earth Station Transmitter, Model 9570, includes an Analog Modulator and a 
+Digital Modulator as well as two up converters. 
+The Analog Modulator provides pre-emphasis baseband processing as well as 
+wideband FM modulation. The Wideband FM Modulator generates a modulated 
+signal at the first intermediate frequency (IF 1) of the transmitter. 
+The 10 MHz bandwidth of the Wideband FM Modulator is sufficient for 
+transmitting one composite television signal, an example of single channel per 
+carrier (SCPC) transmission, or a number of multiplexed telephone connections 
+using frequency division multiplexing (FDM)1, an example of multiple connections 
+per carrier (MCPC). 
+The Digital Modulator provides baseband processing and DQPSK (differential 
+QPSK) modulation. The baseband section includes a 4-input TDM multiplexer, 
+allowing for the time division multiplexing of up to four data streams at a 
+maximum bit rate of 4 Mb/s each.2 A fifth input is provided for the transmission of 
+one unmultiplexed data stream of up to 20 Mb/s. 
+ 
+1 User-supplied equipment is required to multiplex and demultiplex the analog signals. 
+2 The bit rate of DATA INPUT 4 is limited by the capacity of the serial USB port. 
+The bit rate Rୠ of a digital 
+signal is the number of bits 
+sent per second. Ex. 1-1 – Satellite Communication Systems  Discussion
+© Festo Didactic 86311-10 27
+A Scrambler is used to ensure frequent transitions in the data and to spread the 
+power smoothly over the available bandwidth. A Clock & Frame Encoder is used 
+with TDM to add transitions to the multiplexed data in order to ensure reliable 
+clock recovery in the receiver as well as control bits for frame synchronization. 
+The digital data is applied to a DQPSK Modulator which generates a digitally 
+modulated signal at the first intermediate frequency (IF 1) of the transmitter. 
+This intermediate frequency from either the Analog Modulator or the Digital 
+Modulator is up converted in two stages by Up Converter 1 and Up Converter 2 
+in order to produce the RF Output signal. Up Converter 2 includes a Channel 
+selector to select one of six carrier frequencies in the 11 GHz range. The 
+antenna connected to the RF output transmits the uplink RF signal to the Satellite 
+Repeater. 
+Up Converter 2 also has a Power Sensor (see Power Sensors). 
+The Earth Station Receiver 
+Figure 1-16. The Earth Station Receiver. 
+Earth Station Receiver, Model 9571, has an RF INPUT to which the receiving 
+antenna is connected. The received downlink signal is down-converted in two 
+stages. Down Converter 2 includes a Channel selector to select one of six carrier 
+frequencies in the 9 GHz range. Down Converter 1 has a variable Gain control. 
+Digital satellite communications usually use a form of 
+PSK (phase shift keying) 
+modulation, such as QPSK 
+(quadrature phase-shift 
+keying). DQPSK is QPSK 
+with differential encoding. 
+These topics are covered in 
+Unit 3. Ex. 1-1 – Satellite Communication Systems  Discussion
+28 © Festo Didactic 86311-10 
+The output signal of Down Converter 1 is at the first intermediate frequency (IF 1) 
+of the receiver. 
+Down Converter 1 and 2 each have a Power Sensor (see Power Sensors). 
+The Earth Station Receiver includes both an Analog Demodulator and a Digital 
+Demodulator, both operating at IF 1. The Analog Demodulator provides 
+wideband FM demodulation as well as baseband de-emphasis processing. The 
+Digital Demodulator provides DQPSK demodulation as well as baseband 
+processing and TDM demultiplexing of the demodulated data. 
+The differential QPSK digital modulation used in the Earth Station Transmitter
+produces a suppressed-carrier modulated signal. However, the demodulator in 
+the Earth Station Receiver requires a copy of the transmitted carrier in order to 
+demodulated the signal and recover the data. The QPSK Costas Loop in the 
+Digital Demodulator of the receiver is a circuit that reconstructs the missing 
+carrier and then decodes the data. 
+A Costas loop is a type of phased-locked loop often used to recover a carrier 
+from a suppressed-carrier modulation signal, such as a QPSK. It includes an 
+oscillator whose frequency and phase are controlled using a feedback loop. The 
+feedback loop causes the oscillator to lock onto one of the phases present in the 
+QPSK signal. Once the Costas loop is locked, it tracks that phase in order to 
+keep the recovered carrier at the correct frequency and phase. The recovered 
+carrier is a stable, sinusoidal waveform that is equivalent to the carrier signal 
+used in the transmitter modulator. This recovered carrier is used to demodulate 
+the digitally modulated signal. 
+The QPSK Costas Loop in the Earth Station Receiver recovers the carrier and 
+demodulates the QPSK signal in order to recover the raw data that represents 
+the differentially encoded symbols. This Costas loop is locked manually. The 
+steps required to lock the Costas loop are given in the exercise Procedure. 
+The Satellite Repeater 
+Figure 1-17. The Satellite Repeater. 
+The Satellite Repeater, Model 9572, uses separate uplink and downlink 
+antennas. It contains a wideband receiver consisting of a low-noise 
+amplifier (LNA), a down converter to shift the 11 GHz uplink signal down to the 
+9 GHz downlink range and an amplifier. This is followed by a telemetry-controlled Ex. 1-1 – Satellite Communication Systems  Discussion
+© Festo Didactic 86311-10 29
+variable gain amplifier (VGA), an isolator, a band-pass filter, and a power 
+amplifier (PA). 
+Several components of the Satellite Repeater are redundant, that is, there is a 
+main and a backup unit. These are controlled by telemetry and are used in 
+troubleshooting exercises. LEDs on the front panel show which unit is currently in 
+use. 
+The Satellite Repeater also has a Power Sensor (see Power Sensors). 
+Power Sensors 
+To facilitate antenna alignment and measurement of RF power levels, the Earth 
+Station Transmitter, the Earth Station Receiver, and the Satellite Repeater each 
+have a Power Sensor. The Power Sensor converts the detected power level into 
+a dc voltage. This voltage is available at the POWER SENSOR OUTPUT and/or 
+is used to drive Level LEDs. 
+Users of conventional instruments can observe a relative indication of the power 
+by connecting a dc voltmeter to the POWER SENSOR OUTPUT. If necessary, 
+the measured voltage can be converted into an absolute power level in dBm by 
+referring to Appendix E Using Conventional Instruments. 
+Users of the optional Telemetry and Instrumentation Add-On can read the power 
+level directly in dBm using the virtual True RMS Voltmeter / Power Meter. For 
+this, the POWER SENSOR OUTPUT is connected to one input of the Virtual 
+Instrument, and the appropriate module is selected as the Source of the 
+True RMS Voltmeter / Power Meter. 
+In addition to direct measurement, the power of the Satellite Repeater can also 
+be measured remotely from the earth station, using telemetry. In this case, the 
+power is displayed in dBm in the Telemetry tab of the Telemetry and 
+Instrumentation application. 
+a The Power Sensors and the spectrum analyzer indicate power differently. A 
+spectrum analyzer shows the power of each individual frequency component 
+present in the signal whereas the Power Sensor produces a dc voltage 
+proportional to the sum of the powers of all frequency components in its range. 
+Since the spectrum analyzer displays only a limited range of frequencies at a 
+time, some significant frequency components, including parasitic frequency 
+components, may not be visible on the spectrum analyzer display. They will, 
+however, be included in the Power Sensor reading. For this reason, and 
+because of non-linearities in the two instruments, they may not indicate exactly 
+the same power. 
+In addition, the Power Sensors are calibrated for the Channel D frequencies. 
+When using other channels, the Power Sensors may give less accurate 
+results. 
+For measuring the power of a single frequency component (e.g. the power of 
+an unmodulated carrier signal), the spectrum analyzer will give more accurate 
+results – the Power Sensor generally indicates a higher power than the 
+spectrum analyzer does. For measuring the total power of a complex signal, 
+however, the Power Sensor is much easier to use. Ex. 1-1 – Satellite Communication Systems  Discussion
+30 © Festo Didactic 86311-10 
+On the Satellite Repeater, the three Power Sensor Level LEDs provide a rough 
+indication of the power at the RF OUTPUT, which is proportional to the power at 
+the RF INPUT. The greater the power, the more LEDs are lit. 
+On the Earth Station Receiver, the three Power Sensor Level LEDs provide a 
+rough indication of the power at the IF OUTPUT of Down Converter 1, which is 
+proportional to the power at the RF INPUT and to the Gain adjustment. During 
+normal operation, the Gain should be adjusted so the green LED is lit. The red 
+‒ LED and  LED indicate that the power level is too low or too high, 
+respectively. 
+The Telemetry and Instrumentation Add-On 
+The optional Telemetry and Instrumentation Add-On, Model 8093-1, provides an 
+alternative to costly conventional instruments. This add-on, used in conjunction 
+with the Telemetry and Instrumentation application, provides telemetry with the 
+Satellite Receiver as well as a full suite of virtual instruments. 
+The Telemetry and Instrumentation Add-On consists of two modules: 
+Figure 1-18. The Data Generation/Acquisition Interface. 
+The Data Generation/Acquisition Interface, Model 9573 provides a telemetry link 
+with the Satellite Repeater. It also provides a Spectrum Analyzer Interface for 
+use with the Virtual Instrument, Model 1250-A0, as well as Digital Inputs and 
+Digital Outputs. Front panel USB connectors are provided for connecting this 
+module to the host computer’s USB port and for connecting other modules. Ex. 1-1 – Satellite Communication Systems  Discussion
+© Festo Didactic 86311-10 31
+Figure 1-19. The Virtual Instrument Package. 
+The Virtual Instrument, Model 1250-A0, samples the analog signals applied to its 
+two inputs in order to acquire data for the Telemetry and Instrumentation 
+application. The high sampling rate (up to 1 GS/s) provides the Virtual Instrument
+with a 250-MHz bandwidth that is amply sufficient for the observation and 
+analysis of the various signals in the Satellite Communications Training System. 
+The Virtual Instrument unit also provides an output for the analog Waveform 
+Generator. 
+This module requires a USB connection to the host computer. It can be 
+connected to a USB connector on the Data Generation/Acquisition Interface or 
+directly to a USB port on the computer. 
+The Telemetry and Instrumentation application, used in conjunction with the 
+Telemetry and Instrumentation Add-On, provides a user interface for telemetry 
+with the Satellite Receiver. It also provides the following virtual instruments: 
+ Oscilloscope 
+ Spectrum Analyzer 
+ Power Meter 
+ BER Tester 
+ Waveform Generator 
+ Three user-configurable Binary Sequence Generators (BSGs) 
+Refer to Appendix D Using the Telemetry and Instrumentation Add-On for 
+information on connecting and operating the add-on and the software. 
+a The exercises in this manual (except for procedure steps involving telemetry) 
+can be performed using suitable conventional instruments and generators, 
+instead of the Telemetry and Instrumentation Add-On (see List of Equipment 
+Required at the beginning of this manual as well as Appendix E Using 
+Conventional Instruments). Ex. 1-1 – Satellite Communication Systems  Discussion
+32 © Festo Didactic 86311-10 
+Symbols and abbreviations used on the module front panels 
+Table 1-5 and Table 1-6 show the Symbols and abbreviations used on the 
+module front panels of the Satellite Communications Training System modules. 
+Table 1-5. Symbols used on the module front panels. 
+Amplifier Band-pass filter 
+Mixer Directional coupler 
+Oscillator Isolator 
+Low-pass filter USB connector 
+Table 1-6.	 Abbreviations and acronyms used on the module front panels. 
+A amplifier 
+DEMUX demultiplexer 
+DQPSK differential QPSK 
+FM frequency modulation 
+I in-phase 
+IF intermediate frequency 
+LNA low-noise amplifier 
+LNB low-noise block 
+LO local oscillator 
+MUX multiplexer 
+PA power amplifier 
+Q quadrature-phase 
+QPSK quadrature phase-shift keying 
+RF radio frequency 
+SYNC. synchronization Ex. 1-1 – Satellite Communication Systems  Discussion
+© Festo Didactic 86311-10 33
+TDM time-division multiplexing 
+TP test point 
+TTC telemetry, tracking and command 
+VCO voltage-controlled oscillator 
+VGA variable-gain amplifier 
+Frequency converters 
+Frequency converters are used in each of the RF modules in order to shift the 
+frequency of a signal up or down. A frequency converter that shifts the frequency 
+up is called an up converter. A down converter shifts the frequency down. 
+A frequency converter consists of a mixer and a local oscillator (LO) followed by 
+a filter. The local oscillator used in a frequency converter can be either a fixedfrequency oscillator or a frequency synthesizer capable of producing a number of 
+different frequencies. 
+Figure 1-20.	 Frequency converter. 
+In the Satellite Communications Training System, the following naming 
+convention is used: 
+ There are four frequency ranges in the Earth Station Transmitter and the 
+Earth Station Receiver: RF, IF 2, IF 1, and the baseband. These 
+frequency ranges compare as follows: 
+RF		൐		IF	2			൐		IF	1		൐		baseband	frequencies
+ Up Converter 2 and Down Converter 2 operate at higher frequencies 
+than Up Converter 1 and Down Converter 1 
+The operation of frequency 
+converters is covered in 
+more detail in Exercise 1-2. 
+Input 
+Signal 
+Local Oscillator (LO) 
+(fixed-frequency oscillator or 
+frequency synthesizer) 
+Mixer Band-pass Filter 
+Output 
+Signal Ex. 1-1 – Satellite Communication Systems  Discussion
+34 © Festo Didactic 86311-10 
+Figure 1-21 shows where these frequency ranges are used in the earth station 
+modules. 
+Figure 1-21. Frequency ranges in the Satellite Communications Training System. 
+Signal levels 
+Table 1-7 shows typical IF and RF signal levels in the Satellite Communications 
+Training System. All levels are approximate and some depend on the distances 
+between the transmitting and receiving antennas. 
+Table 1-7.	 Typical IF and RF signal levels. 
+Earth Station Transmitter 
+Analog Modulator and Digital Modulator 
+IF 1 OUTPUT 6 dBm 
+RF OUTPUT 3 dBm 
+(varies according to selected Channel) 
+Satellite Repeater 
+RF INPUT 31 dBm
+RF OUTPUT 10 dBm 
+Earth Station Receiver 
+RF INPUT 48 dB 
+Analog Demodulator and Digital Demodulator
+IF INPUT 2 dBm 
+Data Generation/Acquisition Interface 
+Frequency Converter INPUT 10 dB max.*
+* Connect one of the Attenuators (10 dB or 20 dB) in series with the Frequency Converter 
+if the applied signal level exceeds this maximum level. 
+Up Converter 
+2 Modulator Up Converter
+1 
+Down Converter 
+2 
+Down Converter 
+1 
+RF 
+Earth Station Transmitter 
+Earth Station Receiver 
+Demodulator 
+Original IF 1 IF 2 
+Baseband 
+Signal 
+RF IF 2 IF 1 Recovered 
+Baseband 
+Signal Ex. 1-1 – Satellite Communication Systems  Discussion
+© Festo Didactic 86311-10 35
+The inputs on the modules of the Satellite Communications Training System are NOT
+protected against misconnection. When using the system, be sure to observe the following
+precautions: 
+Analog inputs (BNC connectors in analog sections) are calibrated for
+voltages of 1.0 V pp. Voltages exceeding 5 V pp at analog inputs may 
+damage the modules. Adjust the signal levels produced by all usersupplied equipment BEFORE connecting this equipment to the
+modules. 
+Digital inputs (BNC connectors in digital sections) are designed for TTL 
+levels. Voltages exceeding standard TTL levels may damage the 
+equipment. 
+RF INPUTs (SMA connectors marked “RF INPUT”) are designed for
+low level RF signals from an antenna. Never make a direct connection
+between an RF OUTPUT and an RF INPUT without using an
+appropriate attenuator. Excessive RF signal levels may damage the
+equipment. 
+IF INPUTs (SMA connectors marked “IF INPUT”) are designed for
+connection to IF OUTPUTs on the system modules. 
+When connecting external devices and instruments to the system modules, it is 
+the user’s responsibility to make sure that all signal levels are compatible. 
+Safety with RF fields 
+When studying satellite communications systems, it is very important to develop 
+good safety habits. Although microwaves are invisible, they can be dangerous at 
+high levels or for long exposure times. The most important safety rule when 
+working with microwave equipment is to avoid exposure to dangerous radiation 
+levels. 
+Figure 1-22 shows radiation standards established by three regulatory 
+organizations: the American Federal Communications Commission (FCC), the 
+International Commission on Non-Ionizing Radiation Protection (ICNIRP), and 
+Health Canada. There are two traces for each standard, one for people classed 
+as RF and microwave exposed workers (solid line) and one for people who are 
+not so classed, including the general public (broken line). 
+The standards are expressed in terms of plane-wave equivalent power density, 
+that is, the average power per unit area normal to the direction of propagation. 
+The figure also shows the maximum power density that can be produced by the 
+Satellite Communications Training System using the supplied equipment. Ex. 1-1 – Satellite Communication Systems  Discussion
+36 © Festo Didactic 86311-10 
+Figure 1-22. Radiation safety standards. 
+Figure 1-22 shows that the radiation levels in the Satellite Communications 
+Training System are too low to be dangerous. The highest power level in the 
+system is at the RF OUTPUT of the Earth Station Transmitter and is typically 
+5 dBm (approximately 3.2 mW) at 11 GHz. The maximum possible plane-wave 
+equivalent power density S using the supplied equipment would be obtained by 
+connecting the Small-Aperture Horn Antenna to the RF OUTPUT of the Earth 
+Station Transmitter. Neglecting losses and antenna aperture efficiency, the 
+maximum power density would be approximately: 
+SൌP A⁄
+ൌ 3.2 mW 25 cmଶ ⁄
+ൌ 0.13 mW cmଶ ⁄
+(1-1)
+where S is the maximum plane-wave equivalent power density 
+P is the output power of the transmitter 
+A is the front surface area of the horn antenna 
+In normal operation, the Large-Aperture Horn Antenna is connected to the Earth 
+Station Transmitter. Neglecting losses and antenna aperture efficiency, the 
+normal maximum power density is approximately: 
+SൌP A⁄
+ൌ 3.2 mW 76 cmଶ ⁄
+ൌ 0.04 mW cmଶ ⁄
+(1-2)
+0.01
+0.1
+1
+10
+100
+0 1 10 100 1,000 10,000 100,000
+FCC ‐ Workers
+FCC ‐ Public
+INCIRP ‐ Workers
+INCIRP ‐ Public
+Health Canada ‐ Workers
+Health Canada ‐ Public
+Satellite Communications
+Training System
+Losses and aperture efficiency may reduce the 
+actual power density by at 
+least 25% to 50%. 
+The power radiated by the 
+Satellite Repeater is typically 10 dBm (0.1 mW) at 
+9 GHz. 
+Frequency (MHz) 
+Plane-Wave Equivalent Power Density (mW/cm2) 
+FCC - Public 
+ICNIRP - Workers 
+ICNIRP - Public 
+Health Canada - Workers 
+Health Canada - Public
+Satellite Communications 
+Training System 
+FCC - Workers Ex. 1-1 – Satellite Communication Systems  Procedure Outline
+© Festo Didactic 86311-10 37
+For your safety, and to develop safe work habits, avoid looking directly into the
+antennas when the Earth Station Transmitter or the Satellite Repeater is on. 
+The Procedure is divided into the following sections: 
+ System startup
+ Optimizing antenna alignment
+ Analog communications
+ Transmitting analog signals from external sources
+ Digital communications
+ Transmitting digital signals
+ Data transfer
+This procedure is designed to familiarize you with the basic operation of a 
+satellite communications system. It will also allow you to become familiar with the 
+Satellite Communications Training System and with the virtual or conventional 
+instruments you will be using throughout the courseware. 
+System startup 
+1. If not already done, set up the system and align the antennas visually as 
+shown in Appendix B. 
+2. Make sure that no hardware faults have been activated in the Earth Station 
+Transmitter or the Earth Station Receiver. 
+b Faults in these modules are activated for troubleshooting exercises using DIP 
+switches located behind a removable panel on the back of these modules. For 
+normal operation, all fault DIP switches should be in the “O” position. 
+3. Turn on each module that has a front panel Power switch (push the switch 
+into the I position). After a few seconds, the Power LED should light. 
+4. If you are using the optional Telemetry and Instrumentation Add-On: 
+ Make sure there is a USB connection between the Data 
+Generation/Acquisition Interface, the Virtual Instrument, and the host 
+computer, as described in Appendix B. 
+ Turn on the Virtual Instrument using the rear panel power switch. 
+b If the TiePieSCOPE drivers need to be installed, this will be done 
+automatically in Windows 7 and 8. In Windows XP, the Found New 
+Hardware Wizard will appear (it may appear twice). In this case, do not 
+connect to Windows Update (select No, not this time and click Next). Then 
+select Install the software automatically and click Next. 
+PROCEDURE OUTLINE
+PROCEDUREEx. 1-1 – Satellite Communication Systems  Procedure
+38 © Festo Didactic 86311-10 
+ Start the Telemetry and Instrumentation application. In the Application 
+Selector, do not select Work in stand-alone mode. 
+b If the Telemetry and Instrumentation application is already running, exit 
+and restart it. This will ensure that no faults are active in the Satellite 
+Repeater. 
+Connection Diagrams 
+Connections are shown in this manual using diagrams that contain colored 
+blocks. These blocks correspond to functional blocks or sections shown on the 
+front panels of the modules. Color is used to identify the module, as shown in the 
+examples below: 
+Other colors are used to identify the modules of the optional Telemetry and 
+Instrumentation Add-On. 
+The type of cable required for each connection depends on the type of 
+connectors used on the modules. Microwave cables have SMA connectors 
+whereas low-frequency cables have BNC connectors. 
+Long microwave cables are usually used to connect the antennas, for flexibility in 
+placing the antennas, although short microwave cables can be used if desired. 
+Small-Aperture Horn Antennas are usually connected to the Satellite Repeater. 
+Large-Aperture Horn Antennas are usually connected to the Earth Station 
+Transmitter RF OUTPUT and the Earth Station Receiver RF INPUT. 
+Grey blocks are instruments. These can be either conventional instruments 
+provided by the user or virtual instruments included in the optional Telemetry and 
+Instrumentation Add-On. 
+ 
+In these connection diagrams, the names of the inputs and outputs of the blocks 
+are given where necessary for clarity or in order to prevent ambiguity. For 
+example, since the Pre-Emphasis block on the Earth Station Transmitter has only 
+one input and one output, these outputs may not be named. As the Satellite 
+Repeater has two outputs, however, the output to be used is always named. 
+Oscilloscope 
+CH1 
+Waveform 
+Generator Pre-Emphasis 
+BNC T-connector
+CH2
+Earth Station 
+Transmitter
+Satellite 
+Repeater 
+RF OUTPUT 
+Small-Aperture 
+Horn Antenna 
+(Downlink) 
+Small-Aperture 
+Horn Antenna 
+(Uplink) 
+Earth Station Transmitter Satellite Repeater Up Converter 
+Down Converter 
+2 
+Satellite 
+Repeater 
+Up Converter
+2 Ex. 1-1 – Satellite Communication Systems  Procedure
+© Festo Didactic 86311-10 39
+Using the Telemetry and Instrumentation Add-On
+To assist those who are using the optional Telemetry and Instrumentation 
+Add-On, instead of conventional instruments, additional information may be 
+provided showing exactly how to make the connections. For example, consider 
+the circuit shown below: 
+The waveform generator and the oscilloscope can be implemented using the 
+Telemetry and Instrumentation Add-On, as shown in the following figure. The 
+generated waveform is available at the GEN OUT connector of the Virtual 
+Instrument. On the same module, the inputs CH1 IN and CH2 IN act as the 
+inputs to the virtual Oscilloscope. 
+In the Telemetry and Instrumentation application, the virtual Waveform Generator 
+is always available and does not need to be started. It is configured using the 
+Waveform Generator settings, for example: 
+ Waveform Generator 
+Function ......................................................... Sine 
+Frequency ..................................................... 1000 kHz 
+Output Level .................................................. 0.1 V 
+a Because the Waveform Generator uses digital circuits, it may not be possible 
+to set the Frequency to the exact frequency desired. For example, after 
+entering 1000 kHz, the value changes to 999.999 kHz. 
+To use the virtual Oscilloscope, click the icon, or choose Oscilloscope in the 
+Instruments menu. Then set the Source setting for each channel used: 
+ Oscilloscope Settings 
+Channel 1 (X) 
+Source ........................................................... CH1 IN 
+Channel 2 (Y) 
+Source ........................................................... CH2 IN 
+Set the other Oscilloscope settings as required. 
+a For detailed information on connecting and using the virtual instruments, refer 
+to Appendix D Using the Telemetry and Instrumentation Add-On or to the Help 
+menus in the Telemetry and Instrumentation application. 
+Virtual Instrument 
+CH2 IN GEN OUT Pre-Emphasis 
+CH1 IN BNC T-connector
+Oscilloscope 
+CH1 
+Waveform 
+Generator Pre-Emphasis 
+BNC T-connector
+CH2 
+Earth Station 
+TransmitterEx. 1-1 – Satellite Communication Systems  Procedure
+40 © Festo Didactic 86311-10 
+Optimizing antenna alignment 
+This section shows an easy way to optimize alignment of the uplink and downlink 
+antennas. You can use this method at any time during normal operation without 
+modifying the current connections. 
+5. Make the connections shown in Figure 1-23. 
+b In Figure 1-23, there is no connection to the input of the modulator. This 
+procedure will work, however, with or without an input signal to the modulator. 
+If desired, the DQPSK Modulator can be used instead of the Wideband FM 
+Modulator to provide the IF signal that is applied to Up Converter 1. 
+a Although the voltmeter / power meter is not essential for aligning the antennas, 
+it is suggested that you use it the first time you optimize the alignment. After 
+that, you will be able to optimize the alignment by referring only to the Level 
+LEDs on the modules. 
+The connections shown in Figure 1-23 cause an RF signal to be transmitted 
+by the Earth Station Transmitter, relayed by the Satellite Repeater, and 
+received by the Earth Station Receiver. 
+On the Satellite Repeater, the three Power Sensor Level LEDs provide a 
+rough indication of the power at the RF OUTPUT, which is proportional to the 
+power at the RF INPUT. The greater the power, the more LEDs are lit. 
+On the Earth Station Receiver, the three Power Sensor Level LEDs provide a 
+rough indication of the power at the IF OUTPUT of Down Converter 1, which 
+is proportional to the power at the RF INPUT and to the Gain adjustment. 
+During normal operation, the Gain should be adjusted so the green LED is lit. 
+The red ‒ LED and  LED indicate that the power level is too low or too high, 
+respectively. 
+Handle microwave cables with care, especially when making or removing connections.
+Make sure the connectors remain free of dust. Tighten the SMA connectors by hand until
+they are snug. Do not over tighten! 
+For further information on the care of microwave cables, refer to Appendix C. Ex. 1-1 – Satellite Communication Systems  Procedure
+© Festo Didactic 86311-10 41
+Figure 1-23. Connections for antenna alignment. 
+Measuring voltage and power 
+A voltmeter or multimeter can be connected to any BNC connector or test point 
+to measure the voltage present. In this case, the instrument is shown in 
+connection diagrams as a Voltmeter. 
+When connected to the POWER SENSOR OUTPUT of a module, the displayed 
+voltage provides a relative indication of the power level. In this case, the 
+instrument is shown in connection diagrams as a voltmeter / power meter. 
+If you are using a conventional instrument, the voltage from a POWER SENSOR 
+OUTPUT can be converted to an absolute power level by referring to Appendix E 
+Using Conventional Instruments. 
+When aligning the antennas, it is not necessary to know the absolute power 
+level, a relative power level is sufficient. You can simply orient the antennas to 
+maximize the dc voltage at the POWER SENSOR OUTPUT of the receiver. 
+Voltmeter / 
+Power Meter 
+From 
+POWER 
+SENSOR 
+OUTPUT 
+Voltmeter 
+From BNC 
+connector or 
+Test Point 
+Down Converter 
+2 
+Earth Station Receiver
+Earth Station Transmitter 
+Satellite 
+Repeater 
+RF 
+OUTPUT
+Up Converter 
+2 
+Up Converter
+1 
+Wideband FM 
+Modulator 
+Large-Aperture 
+Horn Antenna 
+(Uplink) 
+Small-Aperture 
+Horn Antenna 
+(Downlink) 
+Large-Aperture 
+Horn Antenna 
+(Downlink) 
+Down Converter 
+1 
+Voltmeter / 
+Power Meter 
+POWER SENSOR 
+OUTPUT
+IF 2 OUTPUT 
+(optional) 
+Small-Aperture 
+Horn Antenna 
+(Uplink) 
+RF OUTPUT Ex. 1-1 – Satellite Communication Systems  Procedure
+42 © Festo Didactic 86311-10 
+Measuring power using the Telemetry and Instrumentation Add-On 
+The virtual True RMS Voltmeter / Power Meter measures voltage. When 
+connected to a POWER SENSOR OUTPUT, it can automatically convert the 
+measured dc voltage into a power level in dBm. 
+For example, in order to measure the power at Down Converter 2 of the receiver, 
+the POWER SENSOR OUTPUT of the receiver must be connected to one of the 
+input channels of the Virtual Instrument. The figure below shows it connected to 
+CH2 IN: 
+To start the True RMS Voltmeter / Power Meter, click in the toolbar of the 
+Telemetry and Instrumentation application or choose Instruments  True RMS 
+Voltmeter / Power Meter. 
+In the True RMS Voltmeter / Power Meter, make the following settings: 
+ Input 
+Source ........................................................... (select the input channel used) 
+Module ........................................................... (select the module) 
+Mode .............................................................. Power Meter 
+Click the button or select Continuous Refresh in the View menu in order to 
+make a continuous measurement. Doing this again stops the measurement. 
+In the Power Meter mode, the True RMS Voltmeter / Power Meter converts the 
+dc voltage at any POWER SENSOR OUTPUT directly into a power reading 
+in dBm. 
+b Each of the three RF modules has a Power Sensor. Since each Power Sensor 
+has a different power/voltage characteristic, it is important to set the Module 
+setting correctly. 
+You can enlarge the display of the True RMS Voltmeter / Power Meter by 
+enlarging its window. This will make it more visible when aligning the antennas 
+on the Satellite Repeater. 
+6. Make sure the two uplink antennas are positioned and aligned so they point 
+directly at each other. Do the same with the downlink antennas. 
+On the Earth Station Receiver, set the Gain control to the mid position. 
+Turn the antenna connected to the Earth Station Transmitter to the right or to 
+the left. Note that the three Power Sensor LEDs on the Satellite Repeater
+provide a relative indication of the received power level. The greater the 
+power, the more LEDs are lit. If you have connected the voltmeter / power 
+meter to the Earth Station Receiver, this will also provide a relative indication 
+of the power. Align the two uplink antennas (on the transmitter and on the 
+repeater) to maximize the power. 
+Virtual Instrument 
+CH2 IN 
+CH1 IN 
+Down Converter 
+2 POWER 
+SENSOR 
+OUTPUT Ex. 1-1 – Satellite Communication Systems  Procedure
+© Festo Didactic 86311-10 43
+Turn the antenna connected to the Earth Station Receiver to the right or to 
+the left. Note that the three Power Sensor LEDs on the Earth Station 
+Receiver provide a relative indication of the received power level. If you have 
+connected the voltmeter / power meter, this will also provide a relative 
+indication of the power. Align the two downlink antennas (on repeater and on 
+the receiver) to maximize the power. 
+Adjust the Gain control on the Earth Station Receiver so that the green Level 
+LED is lit. 
+b A good way to align an antenna is to find two angular positions, on either side 
+of the maximum position, where the indicated power levels are approximately 
+equal, and then to point the antenna mid-way between these two positions. 
+This method can be used with the Satellite Communications Training System 
+and with parabolic antennas receiving signals from geostationary satellites. 
+a Because of the low power levels at the Earth Station Receiver, it is quite 
+sensitive to reflections for the RF signal. You may notice that the Level LEDs 
+change when you move near the receiver. This is normal. 
+a With the Satellite Communications Training System and normal distances, 
+antenna alignment is not critical. With real satellites, however, it is essential 
+that antenna alignment be optimized because of power limitations and the 
+great distances involved. Ex. 1-1 – Satellite Communication Systems  Procedure
+44 © Festo Didactic 86311-10 
+Analog communications 
+7. Make the connections shown in Figure 1-24. 
+Analog inputs (BNC connectors in analog sections) are calibrated for voltages of 1.0 V pp. 
+Voltages exceeding 5 V pp at analog inputs may damage the modules. Adjust the signal 
+levels produced by all user-supplied equipment BEFORE connecting this equipment to the
+modules. 
+Figure 1-24. Connections for transmitting an analog signal. 
+a In order to simplify the connection diagrams used in this manual, the CH1 and 
+CH2 inputs of the oscilloscope may be shown in two different blocks, as in 
+Figure 1-24. 
+The Satellite Repeater is not always shown explicitly in connection diagrams. It 
+is always used, however, to relay the RF signal from the Earth Station 
+Transmitter to the Earth Station Receiver. 
+For technical reasons, the De-Emphasis block inverts the polarity of the signal. 
+Although this may be apparent when observing the signals on an oscilloscope, 
+it has no effect on analog transmission except for certain types of signals, such 
+as video signals, where the polarity is important. 
+Down Converter 
+2 
+Down Converter 
+1 
+Wideband FM 
+Demodulator De-Emphasis 
+IF 2 
+OUTPUT 
+Earth Station Receiver
+Oscilloscope 
+CH2 
+Earth Station Transmitter 
+Satellite 
+Repeater 
+RF OUTPUT 
+RF 
+OUTPUT Oscilloscope 
+CH1 
+Waveform 
+Generator Pre-Emphasis Wideband FM 
+Modulator 
+Up Converter
+1 
+Up Converter
+2 Ex. 1-1 – Satellite Communication Systems  Procedure
+© Festo Didactic 86311-10 45
+Using the Virtual Instruments
+To open a virtual instrument in the Telemetry and Instrumentation application, 
+choose a command in the Instruments menu or click the corresponding button on 
+the toolbar. 
+Three analog instruments are provided: 
+ Oscilloscope 
+ Spectrum Analyzer 
+ True RMS Voltmeter / Power Meter 
+One digital instrument is provided: 
+ Bit Error Ratio Tester 
+All virtual instruments have a Source setting which indicates the source of the 
+signal being measured or displayed. In some cases, there is only one possible 
+source. 
+ For analog instruments, the Source can be CH1 IN or CH2 IN (inputs on the 
+Virtual Instrument, Model 1250-A0), or Off to disable the input. 
+ For the BER Tester, the Test Data Source is the Test Data Input (a digital 
+input on the Data Generation/Acquisition Interface). 
+Only one analog instrument can be active at the same time. The status bar 
+indicates the current state of the instrument. 
+Each instrument has two toolbar buttons used to select the refresh mode: 
+Single Refresh and Continuous Refresh . To activate an instrument, click 
+on the instrument and then click either of these buttons. Continuous Refresh
+should be used to continuously monitor a signal. 
+Refer to Appendix D and the on-line help for information on configuring and using 
+the virtual instruments. 
+8. On the Earth Station Transmitter, select a Channel in Up Converter 2. On the 
+Earth Station Receiver, select the same Channel in Down Converter 2. 
+a If more than one earth station is being operated in the same laboratory, each 
+earth station should use a different channel. Ex. 1-1 – Satellite Communication Systems  Procedure
+46 © Festo Didactic 86311-10 
+9. Vary the frequency and the function of the waveform generator. Observe the 
+transmitted and received waveforms on the oscilloscope. Figure 1-25 shows 
+an example of what you might observe. 
+a The instrument screens shown in this manual were taken using the Telemetry 
+and Instrumentation Add-On. If you are using conventional instruments, the 
+displays will be different. In some cases, the settings used are shown in a 
+condensed form in the margin. 
+Figure 1-25. Transmitted and received sine wave. 
+Does the received waveform resemble the transmitted waveform? 
+Yes, the received waveform resembles the transmitted waveform, except that 
+it is inverted by the De-emphasis block. There may also be some distortion 
+that is mainly apparent when transmitting waveforms with very high 
+frequency components, such as a square wave. 
+Examine the front panel of the Satellite Repeater. What type of repeater is 
+this? What is the main difference between this type of repeater and the other 
+main type? 
+The Satellite Communications Training System has a transparent repeater. 
+A transparent repeater does not demodulate the uplink signal. Instead, it 
+simply receives the uplink signal, shifts it to the downlink frequency, amplifies 
+it, and retransmits it. A regenerative repeater, on the other hand, 
+demodulates the uplink signal to recover the baseband signals, carries out 
+baseband signal processing and switching, and then remodulates the 
+baseband signals before transmission over the downlink. 
+10. On the transmitter only, select a different Channel while observing the 
+oscilloscope. This changes the frequency of the local oscillator (LO) used to 
+up convert the IF 2 signal to the RF OUTPUT frequency. 
+Oscilloscope Settings: 
+Channel 1 Source .................... CH1 IN 
+Channel 1 Scale ....................... 1 V/div 
+Channel 2 Source .................... CH2 IN 
+Channel 2 Scale ....................... 1 V/div 
+Time Base ............................... 1 s/div 
+Trigger Source ............................. Ch 1 
+Trigger Level .................................. 0 V 
+Trigger Slope ............................. Rising 
+Generator Settings: 
+Waveform Generator 
+Function ........................................ Sine 
+Frequency .............................1000 kHz 
+Output Level .................................. 1 V 
+Transmitted 
+Received Ex. 1-1 – Satellite Communication Systems  Procedure
+© Festo Didactic 86311-10 47
+What effect does this have on the frequency of the uplink signal? Does the 
+receiver now receive the downlink signal? 
+The frequency of the uplink signal changes. Since the Channel has not been 
+changed on the receiver, the receiver does not recover the downlink signal, 
+except for a small vestige that may be visible on the oscilloscope, especially 
+when transmitting waveforms with very high frequency components, such as 
+a square wave. 
+Change the Channel on the receiver to match the new Channel selected on 
+the transmitter. What effect does this have? 
+This tunes the Down Converter 2 LO on the receiver to receive the downlink 
+signal at the frequency corresponding to the new channel. As a result, the 
+receiver now receives the downlink signal. 
+Is any change on the repeater required to reestablish the link at the new 
+frequencies? Explain. 
+No. Because the transponder bandwidth covers the carrier frequencies of all 
+channels used by the system, no adjustment on the repeater is required in 
+order to use a different channel. 
+Does the repeater transmit the downlink signal at the same frequency as the 
+uplink signal? Explain. 
+b Refer to the Discussion of this exercise. The frequencies of the RF signals will 
+be measured in a later exercise. 
+No, the repeater shifts the uplink signal to a lower frequency before 
+retransmitting it over the downlink. This is necessary to prevent the strong 
+downlink signal from interfering with the weak uplink signal. 
+Transmitting analog signals from external sources 
+11. Use the system to transmit an analog signal from an external source over the 
+satellite link. Any analog signal in the frequency range of approximately 
+10 Hz to 10 MHz can be used, providing the signal level is compatible with 
+the analog inputs on the Earth Station Transmitter. 
+Analog inputs (BNC connectors in analog sections) are calibrated for voltages of 1.0 V pp. 
+Voltages exceeding 5 V pp at analog inputs may damage the modules. Adjust the signal 
+levels produced by all user-supplied equipment BEFORE connecting this equipment to the
+modules. 
+a The cables and adapters included in the Accessories may be used to connect 
+external devices to the Satellite Communications System. User-supplied 
+adapters may also be used where necessary. Ex. 1-1 – Satellite Communication Systems  Procedure
+48 © Festo Didactic 86311-10 
+Except for video devices, connect the devices as follows: 
+ The source device should be usually connected to the Pre-Emphasis 
+INPUT, in place of the waveform generator in Figure 1-24. The signal 
+from the source device will be transmitted over the satellite link to the 
+receiver. 
+ If a suitable device is available to monitor the received signal, it should 
+be connected to the De-Emphasis OUTPUT of the receiver. The 
+oscilloscope or the spectrum analyzer can also be connected to this 
+output, using a BNC T-connector if necessary. 
+When transmitting video signals, do not use the Pre-Emphasis/De-Emphasis 
+blocks. (Using Pre-Emphasis in the transmitter will result in excessive 
+deviation at the Wideband FM Modulator. Using De-Emphasis in the receiver 
+inverts the demodulated signal.) Instead, connect external video devices as 
+shown in Figure 1-26. 
+Figure 1-26.	 Connections for video transmission. 
+Down Converter 
+2 
+Down Converter 
+1 
+IF 2 
+OUTPUT
+Earth Station Receiver
+Earth Station Transmitter 
+Satellite 
+Repeater 
+External video 
+source 
+External video 
+monitor 
+Up Converter
+2 
+RF 
+OUTPUT
+Up Converter
+1 
+Wideband FM 
+Modulator 
+RF OUTPUT 
+Wideband FM 
+Demodulator Ex. 1-1 – Satellite Communication Systems  Procedure
+© Festo Didactic 86311-10 49
+Table 1-8 provides examples of the types of analog signals that can be 
+transmitted over the system along with suggested signal sources. 
+Table 1-8. Analog signals. 
+Signal Typical Frequencies Source Devices Monitor Devices 
+Baseband 
+audio signal 20 Hz to 20 kHz max. 
+ Microphone and preamplifier 
+ Radio 
+ Mp3 player 
+ Computer (audio output) 
+ Dual Function Generator, Model 9402* 
+ Audio amplifier 
+ Headphones 
+ Computer (audio input) 
+ Power Supply / Dual Audio 
+Amplifier, Model 9401 
+Baseband 
+video signal DC to 4.2 MHz 
+ Composite TV output (yellow RCA 
+connector) on: 
+ a digital camera 
+ a camcorder 
+ a VCR 
+ a DVD player 
+ TV with composite video 
+input (yellow connector) 
+ Computer and a USB or 
+PCI TV tuner card that has 
+a composite video input 
+AM signal 
+Approx. 20 kHz to 
+30 kHz bandwidth in 
+the range 520 kHz to 
+1610 kHz 
+ The AM/DSB/SSB Generator, 
+Model 9410* and a suitable audio source 
+ RF signal generator with AM modulation 
+and a suitable audio source 
+ The AM/DSB Receiver, 
+Model 9411* and Power 
+Supply / Dual Audio 
+Amplifier, Model 9401 
+a Best results are obtained when the level of the signal applied to the 
+WIDEBAND FM MODULATOR is approximately 1 Vpp. When using a 
+microphone as a source device, a preamplifier will likely be required. 
+*Models 9402, 9410 and 9411 require the Power Supply / Dual Audio 
+Amplifier, Model 9401 to operate. These models are part of the Analog 
+Communications Training System, Model 8080. 
+What type of connection is established over this satellite link? What type of 
+connection is required for two-way communication? 
+A simplex connection. A duplex connection is required for two-way 
+communication. 
+What type of modulation is presently being used? Explain. 
+The modulation being used is wideband FM, a type of analog modulation 
+frequently used in satellite communications. Analog modulation is used 
+because the baseband signal is an analog signal. 
+How is the output signal of the modulator transformed before transmission? 
+The output signal of the WIDEBAND FM MODULATOR is shifted up in 
+frequency in two stages, by Up Converter 1 AND Up Converter 2, before 
+transmission. Ex. 1-1 – Satellite Communication Systems  Procedure
+50 © Festo Didactic 86311-10 
+Digital communications 
+The QPSK Costas Loop in the Digital Demodulator 
+This section shows what happens as the Costas loop on the Earth Station 
+Receiver locks and also shows how to lock it manually. 
+Locking the QPSK Costas loop
+All forms of PSK modulation, including QPSK and DQPSK, are suppressedcarrier types of modulation. For demodulation to occur, the QPSK Costas loop in 
+the Earth Station Receiver must be locked onto the received QPSK signal in 
+order to recover the suppressed carrier. Once the loop is locked, a feedback 
+circuit keeps it locked, causing it to track the signal in order to maintain the 
+recovered carrier at the correct frequency and phase. 
+The QPSK Costas loop contains a VCO whose frequency and phase are 
+controlled by the voltage at the output of an integrator. This voltage can be 
+measured at TP1 on the Earth Station Receiver. The Center Frequency control 
+on the receiver sets one of the integrator input voltages. This control is used in 
+locking the loop. 
+There is no indicator on the Earth Station Receiver to directly indicate whether 
+the Costas loop is locked or not. There are, however, three indirect indications 
+that the Costas loop is locked: 
+ The Frame Recovery section of the TDM DEMUX in the receiver includes a 
+Sync. LED. This LED lights when the framing bits generated by the 
+Clock & Frame Encoder on the transmitter have been recognized. Since this 
+can only occur when the Costas loop is locked, the Sync. LED can serve as 
+an indicator of the locked condition, providing the Clock & Frame Encoder on 
+the transmitter is turned on. 
+ Digital data from the transmitter is correctly demodulated by the receiver only 
+when the Costas loop is locked. This is true whether the Clock & Frame 
+Encoder and Decoder are on or off. 
+ When the Costas loop is locked, the voltage at TP1 of the receiver remains 
+fixed at a certain level, except for slight fluctuations. You can determine the 
+locked-condition voltage by measuring the voltage at TP1 when the Costas 
+loop is known to be locked. 
+The QPSK Costas loop is designed to be locked manually, although under 
+certain conditions, it may lock without manual intervention. Ex. 1-1 – Satellite Communication Systems  Procedure
+© Festo Didactic 86311-10 51
+12. Make the connections shown in Figure 1-27. 
+Figure 1-27.	 Minimal connections for locking the QPSK Costas Loop. 
+a Figure 1-27 shows the minimal connections required for this step. The QPSK 
+Costas Loop can also be locked while other connections are made to the 
+Digital Modulator and the Digital Demodulator. 
+The QPSK Costas loop is designed to work with a modulated signal that 
+contains all possible phases, such as one carrying relatively complex data. 
+When no data source is connected to the transmitter, turning on the Scrambler 
+will ensure that all phases are present in the modulated signal. 
+13. On the Earth Station Transmitter, make the following adjustments: 
+Channel ......................................................... any 
+Data Source................................................... any 
+Scrambler ...................................................... On 
+Clock & Frame Encoder ................................ On 
+On the Earth Station Receiver, make the following adjustments: 
+Channel ......................................................... same as transmitter 
+Descrambler .................................................. On 
+Center Frequency .......................................... mid position 
+Gain ............................................................... Adjust so the green Level LED is lit. 
+Digital 
+Modulator 
+Up Converter
+1 
+Up Converter
+2 
+RF 
+OUTPUT
+Down Converter 
+2 
+Down Converter 
+1 
+Digital 
+Demodulator 
+Earth Station Transmitter 
+Earth Station Receiver
+I OUTPUT 
+to 
+I INPUT 
+Q OUTPUT 
+to 
+Q INPUT 
+Satellite 
+Repeater 
+RF OUTPUT 
+IQ IQ
+I Q I 
+I OUTPUT 
+to 
+I INPUT 
+Q OUTPUT 
+to 
+Q INPUT Ex. 1-1 – Satellite Communication Systems  Procedure
+52 © Festo Didactic 86311-10 
+14. After making these adjustments, the Sync. LED may go on after a few 
+seconds, indicating that the Costas loop is locked. 
+If the Sync. LED does not go on: 
+ Turn the Center Frequency knob of the QPSK Costas Loop to either 
+extreme position (see Position 1 in Figure 1-28, for example). 
+ After a few seconds, turn the knob to the other extreme position (see 
+Position 2). Wait until the Sync. LED in the Frame Recovery section of 
+the TDM DEMUX lights. When it lights, the Costas Loop is locked. 
+ Turn the knob to the mid position (Position 3). 
+a When the Costas loop is locked, the Center Frequency knob has no effect. 
+However, it is preferable to leave it in the mid position. 
+Position 1 
+If the Sync. LED is off, the TP1 
+voltage is falling. 
+Position 2 
+If the Sync. LED is off, the TP1 
+voltage is rising. 
+Position 3 
+Figure 1-28. Locking the Costas Loop on the receiver. 
+b The  and  LEDs in the QPSK Costas Loop provide a rough indication of the 
+voltage at TP1. When the  LED is lit, the voltage is too low to allow the loop to 
+lock; when the  LED is lit, the voltage is too high. Ex. 1-1 – Satellite Communication Systems  Procedure
+© Festo Didactic 86311-10 53
+15. The Costas loop is easy to lock using the method shown in Step 14. 
+However, it is useful to examine the signals before and after the loop reaches 
+the locked condition. 
+Figure 1-29.	 Connections for the Costas loop (Satellite Repeater used but not shown). 
+The following steps will allow you to observe the signals: 
+1. Make the connections shown in Figure 1-29. In this figure, DATA 
+INPUT 1 on the transmitter and DATA OUTPUT 1 on the receiver are 
+used. However, any other corresponding input-output pair can be used. 
+A probe is used to connect test point TP1 of the Earth Station Receiver
+to the oscilloscope. Set the switch on the probe to the x1 position. 
+b You can use a conventional dc voltmeter, rather than the oscilloscope, to 
+monitor the voltage at TP1. 
+When connecting a probe to a test point, be sure to connect the ground 
+clip to a ground loop on the module front panel. 
+Configure the binary sequence generator (BSG) to produce a pseudorandom sequence. Set n and the Bit Rate as desired (for example, set 
+n to 4 and the Bit Rate to 100 000 bit/s). 
+Set the time base of the oscilloscope to display roughly one or two bits 
+per division (for a bit rate of 100 000 bit/s, you could use a time base of 
+20 s/div). Trigger the oscilloscope on the EXT TRIG signal. 
+A pseudo-random sequence 
+is not truly random but repeats after L bits. The sequence length L = 2n-1 
+where n is the number of 
+shift registers used to generate the sequence. 
+Digital Modulator
+Binary Sequence 
+Generator 
+(BSG) 
+Up Converter 
+1 
+Up Converter
+2 
+Down Converter 
+2 
+Down Converter 
+1 
+Digital 
+Demodulator 
+RF 
+OUTPUT
+IF 2 
+OUTPUT 
+Earth Station Transmitter 
+Earth Station Receiver
+DATA INPUT 1
+SYNC. 
+DATA 
+Oscilloscope 
+CH1 
+CH2 
+BIT CLOCK OUTPUT
+IF 1 
+OUTPUT 
+BIT CLOCK 
+I OUTPUT 
+to 
+I INPUT 
+Q OUTPUT 
+to 
+Q INPUT 
+EXT TRIG
+TP1 
+DATA OUTPUT 1 
+I OUTPUT 
+to 
+I INPUT 
+Q OUTPUT 
+to 
+Q INPUT 
+IQ IQ
+IQ IQEx. 1-1 – Satellite Communication Systems  Procedure
+54 © Festo Didactic 86311-10 
+Using the Telemetry and Instrumentation Add-On
+The Binary Sequence Generator and the oscilloscope in Figure 1-29 can be 
+implemented using the Telemetry and Instrumentation Add-On, as shown below: 
+The Telemetry and Instrumentation application has three Binary Sequence 
+Generators: BSG1, BSG2 and BSG3. Each BSG is fully configurable and 
+generates a repeating binary sequence according to the following settings: 
+BSG Setting Value Result 
+Generation 
+Mode 
+Pseudo-Random 
+Generates a pseudo-random binary 
+sequence whose length is 
+determined by the n setting. 
+User-Entry Generates a user-defined sequence 
+up to 32 bits long. 
+BER Test Data 
+Generates a predetermined 
+sequence used for measuring bit 
+error ratio. 
+n 2 to 16 
+The ݊ value that determines the 
+length ܮ in bits of the pseudo-random 
+binary sequence where ܮൌ2௡ െ 1. 
+Bit Rate 10 000 to 20 000 000 The number of bits per second. 
+Make the following adjustments in the Telemetry and Instrumentation application: 
+Digital Output Settings: 
+ Digital Output 1 
+Source ..................... BSG1 
+Signal ....................... Data 
+ Digital Output 3 
+Source ..................... BSG1 
+Signal ....................... SYNC. 
+Generator Settings: 
+ Binary Sequence Generator (BSG) 1 
+Generation Mode ...... Pseudo-Random 
+n ............................... 3 or more 
+Bit Rate ..................... 100 000 bit/s 
+On the virtual Oscilloscope, set the Trigger Source to EXT. When using an 
+external trigger source, it may be easier to trigger on the falling slope. 
+Virtual Instrument 
+DATA INPUT 1
+BIT CLOCK 
+OUTPUT 
+Digital Modulator 
+Data Generation/ 
+Acquisition 
+Interface 
+BIT CLOCK 
+DIGITAL OUTPUT 1 
+(BSG1 Data) 
+DIGITAL OUTPUT 3 
+(BSG1 Sync.) 
+CH2 IN 
+EXT TRIG 
+CH1 IN Oscilloscope 
+inputs
+I Q I Q Ex. 1-1 – Satellite Communication Systems  Procedure
+© Festo Didactic 86311-10 55
+2. On the Earth Station Transmitter, make the following adjustments: 
+Channel ......................................................... any 
+Data Source................................................... any 
+Scrambler ...................................................... On or Off 
+Clock & Frame Encoder ................................ On 
+On the Earth Station Receiver, make the following adjustments: 
+Channel ......................................................... same as transmitter 
+Descrambler .................................................. same as Scrambler on transmitter 
+Center Frequency .......................................... mid position 
+Gain ............................................................... Adjust so the green Level LED is lit. 
+Because a pseudo-random binary sequence is being transmitted, the 
+Scrambler and Descrambler can both be either On or Off. 
+3. Observe the DATA OUTPUT 1 signal on the oscilloscope. If the Costas 
+loop is locked, you will see the recovered data. Otherwise, an apparently 
+random signal will be displayed, as shown in Figure 1-30. 
+Figure 1-30. TP1 voltage and DATA OUTPUT 1 (Costas loop unlocked). 
+4. Change the CHANNEL on the receiver (select a channel that is not being 
+used by another transmitter in the same laboratory). On the receiver, the 
+POWER SENSOR ““ LED lights to show that there is no received signal 
+and the Sync. LED will be off. The oscilloscope will display an apparently 
+random signal. 
+5. Observe dc voltage at TP1 on the oscilloscope. On the Earth Station 
+Receiver, turn the Center Frequency knob fully clockwise and wait. The 
+Center Frequency knob sets the voltage at one input of an integrator in 
+the feedback loop. The dc voltage at TP1 is the output voltage of the 
+integrator. This dc voltage will gradually rise to its maximum value. 
+The ““ LED in the QPSK Costas Loop will light when the dc voltage is 
+above the range where locking is possible. 
+6. On the Earth Station Receiver, slowly turn the Center Frequency knob 
+counterclockwise. When the knob is below the center position, the 
+Oscilloscope Settings: 
+Channel 1 Scale ....................... 2 V/div 
+Channel 2 Scale ....................... 5 V/div 
+Time Base ............................. 20 s/div 
+Trigger Source .............................. EXT 
+Trigger Level ............................... 1.6 V 
+Trigger Slope ............................. Rising TP1 voltage 
+DATA OUTPUT 1 Ex. 1-1 – Satellite Communication Systems  Procedure
+56 © Festo Didactic 86311-10 
+dc voltage shown on the oscilloscope will begin to fall. Turning the knob 
+further beyond the center position makes the voltage fall more rapidly. 
+Eventually, the dc voltage will reach its minimum value. The “” LED in 
+the QPSK Costas Loop will light when the dc voltage is below the range 
+where locking is possible. 
+b If the dc voltage was allowed to rise too high, it may be difficult to reduce it 
+using the Frequency Control. In this case, temporarily reduce the Gain on 
+Down Converter 1. 
+7. On the Earth Station Receiver and the Earth Station Transmitter select 
+the same Channel. The green POWER SENSOR Level LED on the 
+Earth Station Receiver should be lit. 
+8. Turn the Center Frequency knob to the maximum position (see 
+Position 2 in Figure 1-28). The dc voltage will begin to rise. Eventually, 
+the Costas loop will lock and the Sync. LED will light. At this moment, the 
+demodulated digital data will be displayed on the oscilloscope, as shown 
+in Figure 1-31. 
+Figure 1-31. Costas loop locked. 
+Note the dc voltage at TP1; this is the locked-condition voltage. 
+Locked-condition voltage: ___________ V 
+a The locked-condition voltage is not necessarily the same on each Earth 
+Station Receiver. 
+Locked-condition voltage: approximately 1.8 V 
+9. Turn the Center Frequency knob to either extreme position. Note that the 
+dc voltage at TP1 does not change. When the Costas loop is locked, the 
+feedback loop keeps this voltage at a virtually constant level and the 
+Center Frequency control has no effect. 
+b If this voltage at TP1 of the receiver is stable at the locked-condition 
+voltage, you can assume that the Costas loop is locked. 
+When viewing a sequence 
+of bits on the oscilloscope in 
+the normal display format, a 
+low level corresponds to 0 
+and a high level corresponds to 1. 
+TP1 voltage
+DATA OUTPUT 1Ex. 1-1 – Satellite Communication Systems  Procedure
+© Festo Didactic 86311-10 57
+10. Turn the Center Frequency knob to the center position (Position 3 in 
+Figure 1-28). 
+Transmitting digital signals 
+16. Make the connections shown in Figure 1-32. 
+Note that the data is applied to DATA INPUT 5 of the Earth Station 
+Transmitter. This DATA INPUT does not use the TDM MUX. 
+Figure 1-32. Connections for transmitting a digital signal. 
+Digital Modulator
+Binary Sequence 
+Generator 
+(BSG) 
+Up Converter 
+1 
+Up Converter
+2 
+Down Converter 
+2 
+Down Converter 
+1 
+Digital 
+Demodulator 
+RF 
+OUTPUT
+IF 2 
+OUTPUT 
+Earth Station Transmitter 
+Earth Station Receiver
+DATA INPUT 5
+SYNC 
+DATA 
+Oscilloscope 
+CH1 
+EXT TRIG 
+Oscilloscope 
+CH2 
+DATA OUTPUT 5 
+BIT CLOCK OUTPUT
+IF 1 
+OUTPUT
+BIT CLOCK 
+IQ IQ
+IQ IQ
+RF OUTPUT 
+Satellite 
+Repeater Ex. 1-1 – Satellite Communication Systems  Procedure
+58 © Festo Didactic 86311-10 
+Using the Telemetry and Instrumentation Add-On
+You can configure the Data Generation/Acquisition Interface so that the data 
+from one BSG is available at two different DIGITAL OUTPUTs, as shown below: 
+Make the following adjustments in the Telemetry and Instrumentation application: 
+Digital Output Settings: 
+ Digital Output 1 
+Source ........................................................... BSG1 
+Signal ............................................................. Data 
+ Digital Output 2 
+Source ........................................................... BSG1 
+Signal ............................................................. Data 
+ Digital Output 3 
+Source ........................................................... BSG1 
+Signal ............................................................. SYNC. 
+Make sure the Clock & Frame Encoder on the transmitter is on and that the 
+QPSK Costas Loop is still locked (the Frame Recovery Sync. LED should be 
+lit). 
+On the Earth Station Transmitter, make the following adjustments: 
+Scrambler ...................................................... On 
+Clock & Frame Encoder ................................. Off 
+a Turning off the Clock & Frame Encoder will cause the Sync. LED on the 
+receiver to go off. The Costas loop, however, will stay locked. 
+On the Earth Station Receiver, make the following adjustments: 
+Descrambler .................................................. On 
+Configure the binary sequence generator to generate a relatively short binary 
+sequence, for example, a pseudo-binary sequence of length L = 7 or 15 bits 
+(n = 3 or 4) or a user-defined sequence. 
+Figure 1-33 shows an example of what you might observe on the 
+oscilloscope. 
+DIGITAL OUTPUT 1 
+(BSG1 Data) 
+DATA INPUT 5
+Digital Modulator 
+Data Generation/ 
+Acquisition 
+Interface 
+Virtual Instrument 
+EXT TRIG 
+BIT CLOCK 
+BIT CLOCK 
+OUTPUT 
+CH1 IN 
+DIGITAL OUTPUT 3 
+(BSG1 Sync.) 
+DIGITAL OUTPUT 2 
+(BSG1 Data) 
+I Q I Q Ex. 1-1 – Satellite Communication Systems  Procedure
+© Festo Didactic 86311-10 59
+Figure 1-33.	 Transmitted and received binary sequence (࢔ൌ૝, ࢈ࡾ ൌ ૚૙૙	૙૙૙	bit/s). 
+Using the oscilloscope, compare the received binary sequence with the 
+original binary sequence. 
+Vary the binary sequence and the bit rate. 
+b The maximum bit rate at Data Inputs 1 to 4 on the Earth Station Transmitter is 
+4 Mbit/s. The maximum bit rate at Data Input 5 is 20 Mbit/s. (This is also the 
+maximum Bit Rate for each BSG of the Telemetry and Instrumentation 
+Add-On.) 
+You may need to adjust the Trigger Level a little as you vary the n value. It 
+may be difficult to sync. the oscilloscope when using a very long sequence. 
+b Refer to Using the Telemetry and Instrumentation Add-On for information on 
+changing the binary sequence and the bit rate of the virtual BSG. 
+Is the sequence always recovered correctly at the receiver? 
+Yes, the two sequences are identical except for a slight delay in the received 
+sequence. 
+What type of modulation is presently being used? Explain. 
+The modulation being used is DQPSK (quadrature phase shift keying with 
+differential encoding), a type of digital modulation. Digital modulation is used 
+because the baseband signal is a digital signal. 
+17. Exit the Telemetry and Instrumentation application. 
+Oscilloscope Settings: 
+Channel 1 Scale ....................... 5 V/div 
+Channel 2 Scale ....................... 5 V/div 
+Time Base ............................. 20 s/div 
+Trigger Source .............................. EXT 
+Trigger Level ............................... 2.2 V 
+Trigger Slope ............................ Falling 
+Transmitted 
+sequence 
+Received 
+sequenceEx. 1-1 – Satellite Communication Systems  Procedure
+60 © Festo Didactic 86311-10 
+Data transfer 
+In this section, you will transfer computer data from the Earth Station Transmitter 
+to the Earth Station Receiver using the Data Transfer application, which consists 
+of two separate programs: The Data Transmitter and the Data Receiver. Data is 
+sent using the Data Transmitter via the Earth Station Transmitter. The data is 
+received using the Data Receiver via the Earth Station Receiver. The Data 
+Transmitter and Data Receiver can be run on the same computer or on two 
+different computers. 
+18. Connect the modules of the Satellite Communications Training System as 
+shown in Figure 1-34. 
+Figure 1-34. Module connections for data transfer. 
+On the Earth Station Transmitter, make the following adjustments: 
+Data Source ................................................... TDM MUX 
+Scrambler ...................................................... On 
+Clock & Frame Encoder ................................. On 
+On the Earth Station Receiver, make the following adjustments: 
+Descrambler .................................................. On 
+On the Earth Station Receiver, make sure the Costas loop is locked. The 
+Sync. LED should be lit. 
+Digital 
+Modulator 
+Up Converter
+1 
+Up Converter 
+2 
+RF 
+OUTPUT
+Down Converter 
+2 
+Down Converter 
+1 
+Digital 
+Demodulator 
+Earth Station Transmitter 
+Earth Station Receiver
+I OUTPUT 
+to 
+I INPUT 
+Q OUTPUT 
+to 
+Q INPUT 
+Satellite 
+Repeater 
+RF OUTPUT 
+I Q I Q
+I Q I 
+I OUTPUT 
+to 
+I INPUT 
+Q OUTPUT 
+to 
+Q INPUT Ex. 1-1 – Satellite Communication Systems  Procedure
+© Festo Didactic 86311-10 61
+19. DATA INPUT 4 on the Earth Station Transmitter has a USB connector. DATA 
+OUTPUT 4 on the Earth Station Receiver also has a USB connector. 
+Connect these two USB connectors to one or two computers. There are a 
+number of ways to make these connections, as shown in the examples 
+below. 
+a The use of two computers allows sending data from one computer (connected 
+to the Earth Station Transmitter) over the satellite link to the other computer 
+(connected to the Earth Station Receiver). 
+When using only one computer, this computer is connected to both the Earth 
+Station Transmitter and the Earth Station Receiver. In this case, the data from 
+the computer is sent over the satellite link and received by the same computer. 
+Note that only one computer can be connected to the Telemetry and 
+Instrumentation Add-On. 
+USB connections for data transfer
+Using one computer: 
+Using two computers: 
+Digital 
+Demodulator Digital Modulator
+DATA OUTPUT 4 DATA INPUT 4 
+Receiving 
+Computer 
+USB USB
+Earth Station Receiver Earth Station Transmitter 
+Sending 
+Computer 
+Digital 
+Demodulator Digital Modulator
+DATA OUTPUT 4 DATA INPUT 4 
+Sending/ 
+Receiving 
+Computer 
+USB USB
+Earth Station Receiver Earth Station Transmitter Ex. 1-1 – Satellite Communication Systems  Procedure
+62 © Festo Didactic 86311-10 
+USB connections using the Telemetry and Instrumentation Add-On 
+Using one computer: 
+Using two computers: 
+20. Start the two Data Transfer applications: Data Transmitter and Data 
+Receiver. 
+a If you are using two computers, start the Data Transmitter application on the 
+computer connected to the Earth Station Transmitter and the Data Receiver 
+application on the computer connected to the Earth Station Receiver. 
+Make sure the green USB indicator in each of these applications is lit. This 
+indicates that a connection has been established with the computer. 
+21. Select the Message tab in both the Data Transmitter and the Data Receiver. 
+In the Data Transmitter, type or paste a text message and click Send. The 
+text message should appear in the Data Receiver. 
+Sending/ 
+Receiving 
+Computer 
+USB
+Digital 
+Demodulator 
+Data Generation/
+Acquisition 
+Interface 
+USB
+USB USB
+DATA OUTPUT 4
+Earth Station Receiver Earth Station Transmitter
+Digital Modulator
+DATA INPUT 4 
+Sending 
+Computer 
+USB
+Digital 
+Demodulator 
+Data Generation/
+Acquisition 
+Interface 
+USB
+USB
+USB
+DATA OUTPUT 4 
+Receiving 
+Computer 
+Earth Station Receiver Earth Station Transmitter
+Digital Modulator
+DATA INPUT 4 Ex. 1-1 – Satellite Communication Systems  Conclusion
+© Festo Didactic 86311-10 63
+22. Select the Real-Time Data tab in both the Data Transmitter and the Data 
+Receiver. This tab simulates a remote weather station that continually sends 
+meteorological data via a satellite link. 
+In the Data Transmitter, click the Start button. The current data is transmitted 
+every second. Change any value and observe the received data in the Data 
+Receiver. 
+Click the Random Data button to generate data that varies randomly every 
+second. Note that the data is sent from the transmitter to the receiver every 
+second. 
+23. Select the Files tab in both the Data Transmitter and the Data receiver. This 
+tab allows sending files. 
+In the Data Transmitter, click the Browse button. Open a folder and select 
+one or more files. The selected files will appear in the list (the previous list 
+will be cleared). 
+a The transfer rate via the USB port is approximately 2 Mbit/s. Transferring large 
+files can take a considerable amount of time. 
+Since no error correction is provided by the data transfer applications, it is 
+preferable to avoid transferring large files. 
+The Destination Folder in the Data Receiver shows where the received files 
+will be placed. If you wish to change this folder, use the Browse button. 
+In the Data Transmitter, click Send All. 
+24. When you have finished using the system, exit any software being used and 
+turn off the equipment. 
+In this exercise, you became familiar with the Satellite Communications Training 
+System and learned how to optimize the antenna alignment. You observed the 
+entire system in operation by transmitting and receiving analog and digital 
+signals. You also observed data transfer over the satellite link. 
+1. Name and briefly describe the two main subsystems of a communications 
+satellite. 
+The two main subsystems are the payload and the platform. The payload 
+consists of all the components that provide communications services, that is, 
+which receive, process, amplify and retransmit information. The platform 
+consists of all the components that maintain the satellite in the desired orbit 
+and attitude and that permit the payload to operate and to remain operational 
+over a long period of time. 
+CONCLUSION
+REVIEW QUESTIONSEx. 1-1 – Satellite Communication Systems  Review Questions
+64 © Festo Didactic 86311-10 
+2. Briefly describe the three segments of a satellite communications system. 
+The space segment (SS) consists of all the satellite in space including 
+backup satellites. It also includes the launch vehicles and all the facilities 
+needed to place the satellites in the desired orbits. The ground segment (GS) 
+consists of the traffic Earth stations and all ground-based facilities used for 
+communications traffic. The control segment (CS) consists of all groundbased facilities required for the operation, control, monitoring, and 
+management of the space segment. 
+3. Compare SCPC and MCPC and give some advantages and disadvantages 
+of each. 
+With SCPC (single channel per carrier), each carrier carries only one signal, 
+that is, there is no multiplexing involved. With MCPC (multiple channels per 
+carrier), a number of signals are multiplexed in the baseband before 
+modulation in the transmitter and demultiplexed after demodulation in the 
+receiver. 
+SCPC is the simpler technique and allows flexible use of the available 
+bandwidth without reconfiguration of the transponder. It makes it easy uplink 
+from multiple earth stations to the same transponder and to add receiving 
+earth stations. However, it uses the available bandwidth less efficiency than 
+MCPC. MCPC is more efficient, does not require a dedicated channel for 
+each connection, and is ideal for burst transmissions. However, it requires 
+that all signals are multiplexed at one location and demultiplexed at another 
+location. 
+4. The information carried over a satellite link is carried over different signals 
+that occupy different frequency ranges. Briefly describe these signals and the 
+purpose they serve. 
+The baseband signal contains the information that one wants to transmit from 
+one user terminal to another. It occupies frequencies between 0 Hz and the 
+highest frequency in the signal. The baseband signal modulates a carrier at 
+an intermediate frequency to produce an IF signal that occupies a frequency 
+band considerably higher than the baseband. The IF signal is up converted in 
+one or more stages to the RF frequency used to transmit the signal to the 
+satellite. This RF signal occupies highest frequency band in the satellite 
+communications system. 
+5. What are some of the main factors that influence the choice of RF frequency 
+band used for different types of satellite links? 
+The lower the frequency band, the better the propagation characteristics, but, 
+the higher the frequency band, the greater the available bandwidth. With 
+these higher frequency bands, antennas are more directional which allows 
+using spatial separation to avoid interference between links using the same 
+frequency. © Festo Didactic 86311-10 381
+Bibliography 
+Canada, Health Canada, Limits of Human Exposure to Radiofrequency 
+Electromagnetic Fields in the Frequency Range from 3 KHz to 300 GHz (Safety 
+Code 6), Minister of Health, 1999. 
+Chartrand, Mark R., Satellite Communications for the Nonspecialist, Bellingham, 
+SPIE Press, 2004, ISBN 0-8194-5185-1. 
+Elbert, Bruce R., The Satellite Communication Applications Handbook, Norwood, 
+Artech House, 2004, 1-58053-490-2. 
+Evans, B.G., Satellite Communications Systems, Third Edition, Herts, The 
+Institution of Engineering and Technology, 2008, ISBN 978-0-85296-899-4. 
+International Commission on Non-Ionizing Radiation Protection, Guidelines for 
+Limiting Exposure to Time-Varying Electric, Magnetic, and Electromagnetic 
+Fields (up to 300 GHz), 1997. 
+Maral, Gérard and Bousquet, Michel, Satellite Communications Systems, Fourth 
+Edition, Chichester, John Wiley & Sons, 2002, ISBN 978-0-471-49654-0. 
+Pattan, Bruno, Satellite Systems: Principles and Technologies, New York, Van 
+Nostrand Reinhold,1993, 0-442-01357-4.
+U.S.A., Federal Communications Commission, Office of Engineering & 
+Technology, Evaluating Compliance with FCC Guidelines for Human Exposure to 
+Radiofrequency Electromagnetic Fields (OET Bulletin 65), By Robert F. 
+Cleveland, David M. Sylvar, and Jerry L. Uleck, Washington, 1997.
